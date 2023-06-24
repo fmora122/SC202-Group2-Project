@@ -17,6 +17,7 @@ public class SC202Group2ProjectMain {
         System.out.println("Fabricio's last test");
 <<<<<<< HEAD
         System.out.println("Alejhandro");
+        System.out.println("stress test");
 
         // TODO code application logic here
 
