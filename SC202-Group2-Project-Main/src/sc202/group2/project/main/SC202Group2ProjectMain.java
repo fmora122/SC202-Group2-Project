@@ -14,6 +14,7 @@ public class SC202Group2ProjectMain {
         System.out.println("Alejhandro");
         System.out.println("Fabricio");
         System.out.println("Chris");
+        System.out.println("Fabricio's last test");
 <<<<<<< HEAD
         System.out.println("Alejhandro");
 
