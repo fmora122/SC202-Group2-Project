@@ -6,8 +6,8 @@ package sc202.group2.project.main;
 
 /**
  *
- * @author fmora
+ * @author XPC
  */
-public class AddHerd {
+public class Paddocks {
     
 }
