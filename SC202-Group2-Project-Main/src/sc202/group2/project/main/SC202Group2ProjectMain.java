@@ -1,4 +1,6 @@
 package sc202.group2.project.main;
+import java.time.LocalDate;
+import java.time.Period;
 import javax.swing.JOptionPane;
 
 public class SC202Group2ProjectMain {
@@ -20,7 +22,7 @@ public class SC202Group2ProjectMain {
             int subenter = 0;
             switch(enter){
                 
-                // Cattle Management
+                // Menu #1 - Cattle Management
                 case 1:
 
                     while (subenter!=3){
@@ -31,12 +33,12 @@ public class SC202Group2ProjectMain {
                             
                             case 1:
                                 JOptionPane.showConfirmDialog(null,"Add New Cattle");
-                                //Add New Cattle. Class
+                                // Menu #1.1 - Add New Cattle. Class
                                 break;
                                 
                             case 2:
                                 JOptionPane.showConfirmDialog(null,"Delete Cattle");
-                                //Delete Cattle.
+                                // Menu #1.2 - Delete Cattle.
                                 break;
                                 
                             case 3:
@@ -50,7 +52,7 @@ public class SC202Group2ProjectMain {
                     }
                     break;
                     
-                //Estate Management
+                // Menu #2 - Estate Management
                 case 2:
                     while (subenter!=3){
                         JOptionPane.showConfirmDialog(null,"Estate Management Menu"+"\n1) Add New Estate."+"\n2) Delete Estate."+
@@ -60,12 +62,12 @@ public class SC202Group2ProjectMain {
                             
                             case 1:
                                 JOptionPane.showConfirmDialog(null,"Add New Estate");
-                                //Add New Estate. Class
+                                // Menu #2.1 - Add New Estate. Class
                                 break;
                                 
                             case 2:
                                 JOptionPane.showConfirmDialog(null,"Delete Estate");
-                                // Delete Estate. Class
+                                // Menu #2.2 - Delete Estate. Class
                                 break;
                                 
                             case 3:
@@ -79,7 +81,7 @@ public class SC202Group2ProjectMain {
                     }
                     break;
                     
-                //Paddocks Management
+                // Menu #3 - Paddocks Management
                 case 3:
                     while (subenter!=6){
                         JOptionPane.showConfirmDialog(null,"Paddocks Management Menu"+"\n1) Add New Paddock"+"\n2) Delete Paddock"
@@ -89,27 +91,27 @@ public class SC202Group2ProjectMain {
                             
                             case 1:
                                 JOptionPane.showConfirmDialog(null,"Add New Paddock");
-                                //Add New Paddock. Class
+                                // Menu #3.1 - Add New Paddock. Class
                                 break;
                                 
                             case 2:
                                 JOptionPane.showConfirmDialog(null,"Delete Paddock");
-                                // Delete Paddock. Class
+                                // Menu #3.2 - Delete Paddock. Class
                                 break;
                              
                             case 3:
                                 JOptionPane.showConfirmDialog(null,"Update Paddock Status");
-                                // Update Paddock Status. Class
+                                // Menu #3.3 - Update Paddock Status. Class
                                 break;
                                 
                             case 4:
                                 JOptionPane.showConfirmDialog(null,"Add Cattle to Paddock");
-                                //  Add Cattle to Paddock. Class
+                                //  Menu #3.4 - Add Cattle to Paddock. Class
                                 break;
                             
                             case 5:
-                                JOptionPane.showConfirmDialog(null,"Remove Cattle to Paddock");
-                                // Remove Cattle to Paddock. Class
+                                JOptionPane.showConfirmDialog(null,"Remove Cattle from Paddock");
+                                // Menu #3.5 - Remove Cattle to Paddock. Class
                                 break;
                                 
                             case 6:
@@ -149,6 +151,16 @@ public class SC202Group2ProjectMain {
                             case 4:
                                 JOptionPane.showConfirmDialog(null,"View Current Rest Time.");
                                 // View Current Rest Time.. Class
+                                dateCalc rest = new dateCalc();
+                                System.out.println("Enter the start date");
+                                LocalDate start = rest.collectDate();
+                                System.out.println(start);
+                                System.out.println("Enter the end date");
+                                LocalDate end = rest.collectDate();
+                                System.out.println(end);
+                                int restDays = rest.restCalc(start, end);
+                                System.out.println("The time in between is "+restDays+" days");
+                                
                                 break;
                                 
                             case 5:
