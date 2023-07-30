@@ -18,6 +18,17 @@ public class Estate {
    private double estateSize =0;
    private int estateTotalCattle =0;
 
+    public Estate(String estateName, String estateLocation, String estateManagerName, int estateManagerId, int estateManagerPhone, int estateNumberPaddocks, double estateSize, int estateTotalCattle) {
+        this.estateName = estateName;
+        this.estateLocation = estateLocation;
+        this.estateManagerName = estateManagerName;
+        this.estateManagerId = estateManagerId;
+        this.estateManagerPhone = estateManagerPhone;
+        this.estateNumberPaddocks = estateNumberPaddocks;
+        this.estateSize = estateSize;
+        this.estateTotalCattle = estateTotalCattle;
+    }
+   
     public String getEstateName() {
         return estateName;
     }

@@ -16,6 +16,15 @@ public class Cattle {
     private String cattleSex = "";
     private String cattleBreed = "";
 
+    public Cattle(int cattleID, String cattleName, int cattleBirthdate, double cattleLastWeight, String cattleSexString, String cattleBreed) {
+        this.cattleID = cattleID; 
+        this.cattleName = cattleName;
+        this.cattleBirthdate = cattleBirthdate;
+        this.cattleLastWeight = cattleLastWeight;
+        this.cattleSex = cattleSex;
+        this.cattleBreed = cattleBreed;
+    }
+    
     public int getCattleID() {
         return cattleID;
     }

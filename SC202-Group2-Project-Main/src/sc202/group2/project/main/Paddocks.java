@@ -18,6 +18,18 @@ public class Paddocks {
     private String waterCattle = "";
     private String terrainType ="";
 
+    public Paddocks(int paddocksId, String paddocksName, String paddocksStatus, int cattleEntryDate, int cattleExitDate, int ammountCattle, String waterCattle, String terrainType) {
+        this.paddocksId = paddocksId;
+        this.paddocksName = paddocksName;
+        this.paddocksStatus = paddocksStatus;
+        this.cattleEntryDate = cattleEntryDate;
+        this.cattleExitDate = cattleExitDate;
+        this.ammountCattle = ammountCattle;
+        this.waterCattle =  waterCattle;
+        this.terrainType = terrainType;
+    }
+
+    
     public int getPaddocksId() {
         return paddocksId;
     }
@@ -82,11 +94,5 @@ public class Paddocks {
         this.terrainType = terrainType;
     }
     
-    
-    
-    
-    
-    
-
     
 }
