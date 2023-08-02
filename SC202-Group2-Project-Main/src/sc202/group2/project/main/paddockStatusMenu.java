@@ -20,7 +20,7 @@ import javax.swing.JPanel;
  *
  * @author fmora
  */
-public class paddockMenu {
+public class paddockStatusMenu {
     private JFrame frame;
     private JPanel panelN;
     private JPanel panelC;
@@ -29,35 +29,27 @@ public class paddockMenu {
     private JButton buttonDelete;
     private JButton buttonStatus;
     private JButton buttonExit;
-
-    public paddockMenu(){
-        paddockMain();
+    
+    public paddockStatusMenu(){
+        paddockStatusMain();
     }
-    public void paddockMain() {
+    public void paddockStatusMain() {
         
         frame = new JFrame();
         frame.setSize(300, 300);
         
         panelN = new JPanel();
         panelC = new JPanel();
-        labelN = new JLabel("Paddock Menu");
+        labelN = new JLabel("Paddock Status Menu");
         
-        buttonAdd = new JButton("Add Paddock");
-        buttonAdd.setMaximumSize(new Dimension(215, 25));
-        buttonDelete = new JButton("Delete Paddock");
-        buttonDelete.setMaximumSize(new Dimension(215, 25));
-        buttonStatus = new JButton("Update Paddock Status");
-        buttonStatus.setMaximumSize(new Dimension(215, 25));
-        buttonStatus.addActionListener( new statusActionListener());
+        
         buttonExit = new JButton("Exit");
         buttonExit.setMaximumSize(new Dimension(215, 25));
         buttonExit.addActionListener( new exitActionListener());
         
         panelN.add(labelN);
         panelC.setLayout(new BoxLayout(panelC, BoxLayout.Y_AXIS));
-        panelC.add(buttonAdd);
-        panelC.add(buttonDelete);
-        panelC.add(buttonStatus);
+
         panelC.add(buttonExit);
         
         frame.setTitle("Fincas Anónimas S.A");
@@ -66,14 +58,10 @@ public class paddockMenu {
         frame.setVisible(true);
  
     }
-    class statusActionListener implements ActionListener{
-        public void actionPerformed(ActionEvent e) {
-            new paddockStatusMenu();
-      }
-   }     
     class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
       }
    }    
+
 }
