@@ -3,12 +3,21 @@ import java.time.LocalDate;
 import java.time.Period;
 import javax.swing.JOptionPane;
 
+/**
+ *
+ * @author fmora
+ */
+
 public class SC202Group2ProjectMain {
 
-    
     public static void main(String[] args) {
-        
+        ranchoMenu menu = new ranchoMenu();
+              
+    } 
+    
+}
 
+/*
 // Menu
         int enter = 0;
         while (enter!=5){
@@ -189,7 +198,4 @@ public class SC202Group2ProjectMain {
         
         }
         
-        
-    } 
-    
-}
+*/ 
