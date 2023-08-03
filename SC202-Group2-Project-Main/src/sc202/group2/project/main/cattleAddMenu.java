@@ -49,6 +49,7 @@ public class cattleAddMenu {
     private double cattleLastWeight = 0;
     private String cattleSex = "";
     private String cattleBreed = "";
+    
     public cattleAddMenu(){
         cattleAddMain();
     }
@@ -168,7 +169,10 @@ public class cattleAddMenu {
    }
     class saveActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            frame.dispose();
+            loadData item = new loadData();
+            Cattle temp[] = new Cattle[1];
+            temp= cattle;
+            temp = item.addNewCattle(cattle, cattleID, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
       }
    }
     

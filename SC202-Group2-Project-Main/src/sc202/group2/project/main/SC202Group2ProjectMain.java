@@ -12,18 +12,10 @@ public class SC202Group2ProjectMain {
 
     public static void main(String[] args) {
         
-        Cattle cattle[] = new Cattle[1];
-        Estate estate[] = new Estate[1];
-        Paddocks padocks[] = new Paddocks[1];
-        
-        loadData loader = new loadData();
-        cattle = loader.loadCattle(cattle);
-        estate = loader.loadEstate(estate);
-        //padocks = loader.loadpadocks(padocks);
+
         
         ranchoMenu menu = new ranchoMenu();
-        System.out.println(cattle[25].getCattleName());
-        System.out.println(estate[2].getEstateLocation());
+
     } 
     
 }
