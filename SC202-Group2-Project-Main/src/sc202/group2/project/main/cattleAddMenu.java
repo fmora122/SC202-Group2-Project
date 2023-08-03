@@ -98,6 +98,7 @@ public class cattleAddMenu {
         panelW.add(LBcattleLastWeight);
         panelW.add(LBcattleSex);
         panelW.add(LBcattleBreed);
+        panelW.add(buttonSave);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());
         
@@ -169,10 +170,12 @@ public class cattleAddMenu {
    }
     class saveActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            loadData item = new loadData();
-            Cattle temp[] = new Cattle[1];
-            temp= cattle;
-            temp = item.addNewCattle(cattle, cattleID, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
+            loadData loader = new loadData();
+            allData data = new allData();
+            Cattle tempCattle[] = new Cattle[1];
+            tempCattle = data.getCattle();
+            System.out.println(tempCattle[25].getCattleName());
+            //loader.addNewCattle(tempCattle, cattleID, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
       }
    }
     
