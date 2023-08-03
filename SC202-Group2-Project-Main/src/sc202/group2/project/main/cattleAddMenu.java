@@ -30,6 +30,7 @@ public class cattleAddMenu {
     private JPanel panelMiddle;
     private JLabel labelN;
     private JButton buttonExit;
+    private JButton buttonSave;
     private JLabel LBcattleID; 
     private JLabel LBcattleName;
     private JLabel LBcattleBirthdate;
@@ -42,7 +43,12 @@ public class cattleAddMenu {
     private JTextField TXcattleLastWeight;
     private JTextField TXcattleSex;
     private JTextField TXcattleBreed;
-    
+    private int cattleID = 0; 
+    private String cattleName = "";
+    private int cattleBirthdate = 0;
+    private double cattleLastWeight = 0;
+    private String cattleSex = "";
+    private String cattleBreed = "";
     public cattleAddMenu(){
         cattleAddMain();
     }
@@ -59,6 +65,8 @@ public class cattleAddMenu {
         panelMiddle = new JPanel();
         buttonExit = new JButton("Exit");
         buttonExit.addActionListener( new exitActionListener());
+        buttonSave = new JButton("Save");
+        buttonSave.addActionListener( new saveActionListener());
         
         labelN = new JLabel("Add New Cattle Menu");
         LBcattleID = new JLabel("Cattle ID"); 
@@ -123,34 +131,42 @@ public class cattleAddMenu {
     class TXcattleIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String inputText = TXcattleID.getText();
+            cattleID = Integer.parseInt(inputText);
       }
    }
     class TXcattleNameActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXcattleName.getText();
+            String cattleName = TXcattleName.getText();
       }
    }
     class TXcattleBirthdateActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String inputText = TXcattleBirthdate.getText();
+            cattleBirthdate = Integer.parseInt(inputText);
       }
    }
     class TXcattleLastWeightActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String inputText = TXcattleLastWeight.getText();
+            cattleLastWeight = Double.parseDouble(inputText);
       }
    }
     class TXcattleSexActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXcattleSex.getText();
+            String cattleSex = TXcattleSex.getText();
       }
    }
     class TXcattleBreedActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXcattleBreed.getText();
+            String cattleBreed = TXcattleBreed.getText();
       }
    }    
     class exitActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            frame.dispose();
+      }
+   }
+    class saveActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
       }
