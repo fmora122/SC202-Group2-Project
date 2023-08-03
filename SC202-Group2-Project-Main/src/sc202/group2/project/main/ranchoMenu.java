@@ -102,8 +102,7 @@ public class ranchoMenu {
       public void actionPerformed(ActionEvent e) {
           new paddockMenu();
       }
-   }
-    
+   }    
     class analyticsActionListener implements ActionListener{
       public void actionPerformed(ActionEvent e) {
           new analyticsMenu();

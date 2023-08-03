@@ -30,26 +30,30 @@ public class estateAddMenu {
     private JPanel panelMiddle;
     private JLabel labelN;
     private JButton buttonExit;
-    private JLabel LBcattleID; 
-    private JLabel LBcattleName;
-    private JLabel LBcattleBirthdate;
-    private JLabel LBcattleLastWeight;
-    private JLabel LBcattleSex;
-    private JLabel LBcattleBreed;       
-    private JTextField TXcattleID; 
-    private JTextField TXcattleName;
-    private JTextField TXcattleBirthdate;
-    private JTextField TXcattleLastWeight;
-    private JTextField TXcattleSex;
-    private JTextField TXcattleBreed;
+    private JLabel LBestateName; 
+    private JLabel LBestateLocation;
+    private JLabel LBestateManagerName;
+    private JLabel LBestateManagerId;
+    private JLabel LBestateManagerPhone;
+    private JLabel LBestateNumberPaddocks; 
+    private JLabel LBestateSize;
+    private JLabel LBestateTotalCattle;
+    private JTextField TXestateName; 
+    private JTextField TXestateLocation;
+    private JTextField TXestateManagerName;
+    private JTextField TXestateManagerId;
+    private JTextField TXestateManagerPhone;
+    private JTextField TXestateNumberPaddocks;
+    private JTextField TXestateSize;
+    private JTextField TXestateTotalCattle;
     
-    public cattleAddMenu(){
-        cattleAddMain();
+    public estateAddMenu(){
+        estateAddMain();
     }
-    public void cattleAddMain() {
+    public void estateAddMain() {
         
         frame = new JFrame();
-        frame.setSize(400, 300);
+        frame.setSize(500, 300);
         
         panelN = new JPanel();
         panelW = new JPanel();
@@ -59,35 +63,43 @@ public class estateAddMenu {
         panelMiddle = new JPanel();
         buttonExit = new JButton("Exit");
         
-        labelN = new JLabel("Add New Cattle Menu");
-        LBcattleID = new JLabel("Cattle ID"); 
-        LBcattleID.setPreferredSize(new Dimension(135,19));
-        LBcattleName = new JLabel("Cattle Name");
-        LBcattleName.setPreferredSize(new Dimension(135,19));
-        LBcattleBirthdate = new JLabel("Cattle Birthdate");
-        LBcattleBirthdate.setPreferredSize(new Dimension(135,19));
-        LBcattleLastWeight = new JLabel("Cattle Last Weight");
-        LBcattleLastWeight.setPreferredSize(new Dimension(135,19));
-        LBcattleSex = new JLabel("Cattle Sex");
-        LBcattleSex.setPreferredSize(new Dimension(135,19));
-        LBcattleBreed = new JLabel("Cattle Breed");
-        LBcattleBreed.setPreferredSize(new Dimension(135,19));
-        TXcattleID = new JTextField(20); 
-        TXcattleName = new JTextField(20);
-        TXcattleBirthdate = new JTextField(20);
-        TXcattleLastWeight = new JTextField(20);
-        TXcattleSex = new JTextField(20);
-        TXcattleBreed = new JTextField(20); 
+        labelN = new JLabel("Add New Estate Menu");
+        LBestateName = new JLabel("Estate Name"); 
+        LBestateName.setPreferredSize(new Dimension(180,19));
+        LBestateLocation = new JLabel("Estate Location");
+        LBestateLocation.setPreferredSize(new Dimension(180,19));
+        LBestateManagerName = new JLabel("Estate Manager Name");
+        LBestateManagerName.setPreferredSize(new Dimension(180,19));
+        LBestateManagerId = new JLabel("Estate Manager Id");
+        LBestateManagerId.setPreferredSize(new Dimension(180,19));
+        LBestateManagerPhone = new JLabel("Estate Manager Phone");
+        LBestateManagerPhone.setPreferredSize(new Dimension(180,19));
+        LBestateNumberPaddocks = new JLabel("Estate Number Paddocks");
+        LBestateNumberPaddocks.setPreferredSize(new Dimension(180,19));
+        LBestateSize = new JLabel("Estate Size");
+        LBestateSize.setPreferredSize(new Dimension(180,19));
+        LBestateTotalCattle = new JLabel("Estate Total Cattle");
+        LBestateTotalCattle.setPreferredSize(new Dimension(180,19));
+        TXestateName = new JTextField(20); 
+        TXestateLocation = new JTextField(20);
+        TXestateManagerName = new JTextField(20);
+        TXestateManagerId = new JTextField(20);
+        TXestateManagerPhone = new JTextField(20);
+        TXestateNumberPaddocks = new JTextField(20); 
+        TXestateSize = new JTextField(20);
+        TXestateTotalCattle = new JTextField(20);
         
         panelN.add(labelN);
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
         panelW.add(Box.createVerticalGlue());
-        panelW.add(LBcattleID);
-        panelW.add(LBcattleName);
-        panelW.add(LBcattleBirthdate);
-        panelW.add(LBcattleLastWeight);
-        panelW.add(LBcattleSex);
-        panelW.add(LBcattleBreed);
+        panelW.add(LBestateName);
+        panelW.add(LBestateLocation);
+        panelW.add(LBestateManagerName);
+        panelW.add(LBestateManagerId);
+        panelW.add(LBestateManagerPhone);
+        panelW.add(LBestateNumberPaddocks);
+        panelW.add(LBestateSize);
+        panelW.add(LBestateTotalCattle);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());
         
@@ -99,12 +111,14 @@ public class estateAddMenu {
         
         panelE.setLayout(new BoxLayout(panelE, BoxLayout.Y_AXIS));
         panelE.add(Box.createVerticalGlue());
-        panelE.add(TXcattleID);
-        panelE.add(TXcattleName);
-        panelE.add(TXcattleBirthdate);
-        panelE.add(TXcattleLastWeight);
-        panelE.add(TXcattleSex);
-        panelE.add(TXcattleBreed);
+        panelE.add(TXestateName);
+        panelE.add(TXestateLocation);
+        panelE.add(TXestateManagerName);
+        panelE.add(TXestateManagerId);
+        panelE.add(TXestateManagerPhone);
+        panelE.add(TXestateNumberPaddocks);
+        panelE.add(TXestateSize);
+        panelE.add(TXestateTotalCattle);
         panelE.add(Box.createVerticalGlue());
         
         panelEMiddle.add(Box.createHorizontalGlue());
@@ -119,6 +133,46 @@ public class estateAddMenu {
         frame.setVisible(true);
  
     }
+    class TXestateNameActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXestateName.getText();
+      }
+   }
+     class TXestateLocationActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXestateLocation.getText();
+      }
+   }
+      class TXestateManagerNameActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXestateManagerName.getText();
+      }
+   }
+     class TXestateManagerIdActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXestateManagerId.getText();
+      }
+   }
+     class TXestateManagerPhoneActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXestateManagerPhone.getText();
+      }
+   }
+     class TXestateNumberPaddocksActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXestateNumberPaddocks.getText();
+      }
+   }
+     class TXestateSizeActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXestateSize.getText();
+      }
+   }
+      class TXestateTotalCattleActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXestateTotalCattle.getText();
+      }
+   }
     class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();

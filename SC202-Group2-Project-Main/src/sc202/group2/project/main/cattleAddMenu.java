@@ -120,6 +120,36 @@ public class cattleAddMenu {
         frame.setVisible(true);
  
     }
+    class TXcattleIDActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXcattleID.getText();
+      }
+   }
+    class TXcattleNameActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXcattleName.getText();
+      }
+   }
+    class TXcattleBirthdateActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXcattleBirthdate.getText();
+      }
+   }
+    class TXcattleLastWeightActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXcattleLastWeight.getText();
+      }
+   }
+    class TXcattleSexActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXcattleSex.getText();
+      }
+   }
+    class TXcattleBreedActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXcattleBreed.getText();
+      }
+   }    
     class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
