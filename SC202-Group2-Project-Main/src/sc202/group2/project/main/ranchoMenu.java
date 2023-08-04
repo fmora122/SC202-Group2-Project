@@ -34,9 +34,6 @@ public class ranchoMenu {
     private JButton buttonPaddock;
     private JButton buttonAnalytics;
     
-
-        
-
     
     public ranchoMenu(){
         mainMenu();

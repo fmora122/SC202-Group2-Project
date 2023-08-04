@@ -15,6 +15,9 @@ public class allData {
         public loadData loader = new loadData();
 
     public allData() {
+        allLoaders();
+    }
+    public void allLoaders() {
         cattle = loader.loadCattle(cattle);
         estate = loader.loadEstate(estate);
     }
