@@ -43,7 +43,7 @@ public class cattleAddMenu {
     private JTextField TXcattleLastWeight;
     private JTextField TXcattleSex;
     private JTextField TXcattleBreed;
-    private int cattleID = 0; 
+    public int cattleID = 0; 
     private String cattleName = "";
     private int cattleBirthdate = 0;
     private double cattleLastWeight = 0;
@@ -117,6 +117,7 @@ public class cattleAddMenu {
         panelE.add(TXcattleBreed);
         panelE.add(Box.createVerticalGlue());
         
+        
         panelEMiddle.add(Box.createHorizontalGlue());
         panelEMiddle.add(panelE);
         panelEMiddle.add(Box.createHorizontalGlue());
@@ -167,13 +168,19 @@ public class cattleAddMenu {
             frame.dispose();
       }
    }
-    class saveActionListener implements ActionListener{
+    class saveActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            loadData item = new loadData();
-            Cattle temp[] = new Cattle[1];
-            temp= cattle;
-            temp = item.addNewCattle(cattle, cattleID, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
-      }
-   }
+            // Obtener toda la información ingresada en los campos de texto
+            int cattleId = Integer.parseInt(TXcattleID.getText());
+            String cattleName = TXcattleName.getText();
+            // Obtener otras propiedades del ganado...
+
+            // Crear un nuevo objeto Cattle con la información recopilada
+            Cattle newCattle = new Cattle(cattleId, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
+
+            // Llamar al método saveCattle de la clase saveInfo, pasando el nuevo objeto Cattle
+            saveInfo.saveCattle(newCattle);
+        }
+    }
     
 }

@@ -3,12 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package sc202.group2.project.main;
-
+import java.util.ArrayList;
 /**
  *
  * @author chris
  */
 public class saveInfo {
+    private static ArrayList<Cattle> loadData = new ArrayList<Cattle>();
     
     public class savePaddock {
    
@@ -21,9 +22,8 @@ public class saveInfo {
     
     }
     
-    public class saveCattle{
-        
-    
+public static void saveCattle(Cattle newCattle) {
+        loadData.add(newCattle);
     }
     
 }
