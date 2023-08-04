@@ -34,17 +34,9 @@ public class ranchoMenu {
     private JButton buttonPaddock;
     private JButton buttonAnalytics;
     
-        public Cattle cattle[] = new Cattle[1];
-        public Estate estate[] = new Estate[1];
-        public Paddocks padocks[] = new Paddocks[1];
-        
-
     
     public ranchoMenu(){
         mainMenu();
-        loadData loader = new loadData();
-        cattle = loader.loadCattle(cattle);
-        estate = loader.loadEstate(estate);
     }
     public void mainMenu() {
         

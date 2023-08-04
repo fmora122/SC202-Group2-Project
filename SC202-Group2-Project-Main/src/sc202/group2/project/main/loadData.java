@@ -11,7 +11,7 @@ package sc202.group2.project.main;
 public class loadData {
     
     public Cattle[] loadCattle(Cattle mycattle[]) {
-        int size = 65;
+        int size = 60;
         mycattle = new Cattle[size];
         mycattle[0] = new Cattle(001, "felipe", 03, 1050.6, "Male", "Bavarian");
         mycattle[1] = new Cattle(002, "mari", 26, 720.5, "Female", "Jersey");
@@ -100,7 +100,7 @@ public class loadData {
                     mycattlePlus[i] = mycattle[i];
                 }
                 mycattle = mycattlePlus; // aqui tomamos al objeto original y lo REEMPLAZAMOS con el nuevo, asi logramos agregar un espacio nuevo y conservar los datos originales
-                
+                System.out.println(cattleSexString);
                 //aqui agregamos al mae nuevo
                 mycattle[slot-1]=new Cattle(cattleID, cattleName, cattleBirthdate, cattleLastWeight, cattleSexString, cattleBreed);
                 

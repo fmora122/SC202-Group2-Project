@@ -82,12 +82,19 @@ public class cattleAddMenu {
         LBcattleSex.setPreferredSize(new Dimension(135,19));
         LBcattleBreed = new JLabel("Cattle Breed");
         LBcattleBreed.setPreferredSize(new Dimension(135,19));
+        
         TXcattleID = new JTextField(20); 
+        TXcattleID.addActionListener(new TXcattleIDActionListener());
         TXcattleName = new JTextField(20);
+        TXcattleName.addActionListener(new TXcattleNameActionListener());
         TXcattleBirthdate = new JTextField(20);
+        TXcattleBirthdate.addActionListener(new TXcattleBirthdateActionListener());
         TXcattleLastWeight = new JTextField(20);
+        TXcattleLastWeight.addActionListener(new TXcattleLastWeightActionListener());
         TXcattleSex = new JTextField(20);
-        TXcattleBreed = new JTextField(20); 
+        TXcattleSex.addActionListener(new TXcattleSexActionListener());
+        TXcattleBreed = new JTextField(20);
+        TXcattleBreed.addActionListener(new TXcattleBreedActionListener());
         
         panelN.add(labelN);
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
@@ -98,6 +105,7 @@ public class cattleAddMenu {
         panelW.add(LBcattleLastWeight);
         panelW.add(LBcattleSex);
         panelW.add(LBcattleBreed);
+        panelW.add(buttonSave);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());
         
@@ -134,17 +142,20 @@ public class cattleAddMenu {
         public void actionPerformed(ActionEvent e) {
             String inputText = TXcattleID.getText();
             cattleID = Integer.parseInt(inputText);
+            System.out.println(cattleID);
       }
    }
     class TXcattleNameActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String cattleName = TXcattleName.getText();
+            System.out.println(cattleName);
       }
    }
     class TXcattleBirthdateActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String inputText = TXcattleBirthdate.getText();
             cattleBirthdate = Integer.parseInt(inputText);
+            System.out.println(cattleBirthdate);
       }
    }
     class TXcattleLastWeightActionListener implements ActionListener{
@@ -170,6 +181,7 @@ public class cattleAddMenu {
    }
     class saveActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
             // Obtener toda la información ingresada en los campos de texto
             int cattleId = Integer.parseInt(TXcattleID.getText());
             String cattleName = TXcattleName.getText();
@@ -182,5 +194,17 @@ public class cattleAddMenu {
             saveInfo.saveCattle(newCattle);
         }
     }
+=======
+            allData data = new allData();
+            loadData loader = new loadData();
+            Cattle tempCattle[] = new Cattle[1];
+            tempCattle = data.getCattle();            
+            //tempCattle = loader.addNewCattle(tempCattle, 111, "JUANCHO", 13, 1050.6, "Male", "Bavarian");
+            tempCattle = loader.addNewCattle(tempCattle, cattleID, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
+            System.out.println(tempCattle[60].getCattleName());
+            
+        }
+   }
+>>>>>>> refs/remotes/origin/main
     
 }
