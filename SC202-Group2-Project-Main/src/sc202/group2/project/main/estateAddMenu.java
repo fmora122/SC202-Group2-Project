@@ -62,6 +62,7 @@ public class estateAddMenu {
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
         buttonExit = new JButton("Exit");
+        buttonExit.addActionListener( new exitActionListener());
         
         labelN = new JLabel("Add New Estate Menu");
         LBestateName = new JLabel("Estate Name"); 

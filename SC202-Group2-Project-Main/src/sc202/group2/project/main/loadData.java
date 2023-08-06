@@ -74,6 +74,7 @@ public class loadData {
         mycattle[58] = new Cattle(819, "Saturnino", 01, 1220.4, "Male", "Holstein");
         mycattle[59] = new Cattle(913, "Mark", 9, 1020.5, "Male","Bavarian");
         return mycattle;
+        
     }
     
     public Estate[] loadEstate(Estate myEstate[]) {

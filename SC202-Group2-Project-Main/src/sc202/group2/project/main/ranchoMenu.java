@@ -33,10 +33,13 @@ public class ranchoMenu {
     private JButton buttonEstate;
     private JButton buttonPaddock;
     private JButton buttonAnalytics;
+    public allData data = new allData();
     
     
     public ranchoMenu(){
         mainMenu();
+        data.allLoaders();
+        
     }
     public void mainMenu() {
         
