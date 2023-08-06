@@ -26,11 +26,14 @@ public class paddockAddMenu {
     private JPanel panelN;
     private JPanel panelW;
     private JPanel panelE;
+    private JPanel panelS;
     private JPanel panelWMiddle;
     private JPanel panelEMiddle;
     private JPanel panelMiddle;
     private JLabel labelN;
+    private JLabel labelS;
     private JButton buttonExit;
+    private JButton buttonSave;
     private JLabel LBpaddocksId; 
     private JLabel LBpaddocksName;
     private JLabel LBpaddocksStatus;
@@ -59,12 +62,17 @@ public class paddockAddMenu {
         panelN = new JPanel();
         panelW = new JPanel();
         panelE = new JPanel();
+        panelS = new JPanel();
         panelWMiddle = new JPanel();
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
         buttonExit = new JButton("Exit");
+        buttonExit.addActionListener( new exitActionListener());
+        buttonSave = new JButton("Save");
+        buttonSave.addActionListener( new saveActionListener());
         
         labelN = new JLabel("Add New Padock Menu");
+        labelS = new JLabel("");
         LBpaddocksId = new JLabel("Paddocks Id"); 
         LBpaddocksId.setPreferredSize(new Dimension(180,19));
         LBpaddocksName = new JLabel("Paddock Name");
@@ -91,6 +99,7 @@ public class paddockAddMenu {
         TXterrainType = new JTextField(20);
         
         panelN.add(labelN);
+        panelS.add(labelS);
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
         panelW.add(Box.createVerticalGlue());
         panelW.add(LBpaddocksId);
@@ -101,6 +110,7 @@ public class paddockAddMenu {
         panelW.add(LBammountCattle);
         panelW.add(LBwaterCattle);
         panelW.add(LBterrainType);
+        panelW.add(buttonSave);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());
         
@@ -131,6 +141,7 @@ public class paddockAddMenu {
         frame.getContentPane() .add(BorderLayout.NORTH, panelN);
         frame.getContentPane() .add(BorderLayout.WEST, panelWMiddle);
         frame.getContentPane() .add(BorderLayout.EAST, panelEMiddle);
+        frame.getContentPane() .add(BorderLayout.SOUTH, panelS);
         frame.setVisible(true);
  
     }
@@ -177,6 +188,11 @@ public class paddockAddMenu {
     class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
+      }
+   }
+    class saveActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            labelS.setText("Record Saved! Add a New One or Exit");
       }
    }
 

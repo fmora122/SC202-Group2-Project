@@ -25,11 +25,14 @@ public class estateAddMenu {
     private JPanel panelN;
     private JPanel panelW;
     private JPanel panelE;
+    private JPanel panelS;
     private JPanel panelWMiddle;
     private JPanel panelEMiddle;
     private JPanel panelMiddle;
     private JLabel labelN;
+    private JLabel labelS;
     private JButton buttonExit;
+    private JButton buttonSave;
     private JLabel LBestateName; 
     private JLabel LBestateLocation;
     private JLabel LBestateManagerName;
@@ -58,13 +61,17 @@ public class estateAddMenu {
         panelN = new JPanel();
         panelW = new JPanel();
         panelE = new JPanel();
+        panelS = new JPanel();
         panelWMiddle = new JPanel();
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
         buttonExit = new JButton("Exit");
         buttonExit.addActionListener( new exitActionListener());
+        buttonSave = new JButton("Save");
+        buttonSave.addActionListener( new saveActionListener());
         
         labelN = new JLabel("Add New Estate Menu");
+        labelS = new JLabel("");
         LBestateName = new JLabel("Estate Name"); 
         LBestateName.setPreferredSize(new Dimension(180,19));
         LBestateLocation = new JLabel("Estate Location");
@@ -91,6 +98,7 @@ public class estateAddMenu {
         TXestateTotalCattle = new JTextField(20);
         
         panelN.add(labelN);
+        panelS.add(labelS);
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
         panelW.add(Box.createVerticalGlue());
         panelW.add(LBestateName);
@@ -101,6 +109,7 @@ public class estateAddMenu {
         panelW.add(LBestateNumberPaddocks);
         panelW.add(LBestateSize);
         panelW.add(LBestateTotalCattle);
+        panelW.add(buttonSave);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());
         
@@ -131,6 +140,7 @@ public class estateAddMenu {
         frame.getContentPane() .add(BorderLayout.NORTH, panelN);
         frame.getContentPane() .add(BorderLayout.WEST, panelWMiddle);
         frame.getContentPane() .add(BorderLayout.EAST, panelEMiddle);
+        frame.getContentPane() .add(BorderLayout.SOUTH, panelS);
         frame.setVisible(true);
  
     }
@@ -179,6 +189,10 @@ public class estateAddMenu {
             frame.dispose();
       }
    }
-    
+   class saveActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            labelS.setText("Record Saved! Add a New One or Exit");
+      }
+   } 
 
 }

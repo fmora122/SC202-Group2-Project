@@ -50,6 +50,7 @@ public class paddockMenu {
         buttonAdd.addActionListener( new addActionListener());
         buttonDelete = new JButton("Delete Paddock");
         buttonDelete.setMaximumSize(new Dimension(215, 25));
+        buttonDelete.addActionListener( new delActionListener());
         buttonStatus = new JButton("Update Paddock Status");
         buttonStatus.setMaximumSize(new Dimension(215, 25));
         buttonStatus.addActionListener( new statusActionListener());
@@ -79,6 +80,11 @@ public class paddockMenu {
     class addActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             new paddockAddMenu();
+      }
+   }
+    class delActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            new paddockDelMenu();
       }
    }
     class statusActionListener implements ActionListener{

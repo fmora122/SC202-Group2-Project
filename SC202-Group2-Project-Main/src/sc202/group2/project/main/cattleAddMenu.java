@@ -25,10 +25,12 @@ public class cattleAddMenu {
     private JPanel panelN;
     private JPanel panelW;
     private JPanel panelE;
+    private JPanel panelS;
     private JPanel panelWMiddle;
     private JPanel panelEMiddle;
     private JPanel panelMiddle;
     private JLabel labelN;
+    private JLabel labelS;
     private JButton buttonExit;
     private JButton buttonSave;
     private JLabel LBcattleID; 
@@ -61,6 +63,7 @@ public class cattleAddMenu {
         panelN = new JPanel();
         panelW = new JPanel();
         panelE = new JPanel();
+        panelS = new JPanel();
         panelWMiddle = new JPanel();
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
@@ -70,6 +73,7 @@ public class cattleAddMenu {
         buttonSave.addActionListener( new saveActionListener());
         
         labelN = new JLabel("Add New Cattle Menu");
+        labelS = new JLabel("");
         LBcattleID = new JLabel("Cattle ID"); 
         LBcattleID.setPreferredSize(new Dimension(135,19));
         LBcattleName = new JLabel("Cattle Name");
@@ -97,6 +101,7 @@ public class cattleAddMenu {
         TXcattleBreed.addActionListener(new TXcattleBreedActionListener());
         
         panelN.add(labelN);
+        panelS.add(labelS);
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
         panelW.add(Box.createVerticalGlue());
         panelW.add(LBcattleID);
@@ -135,6 +140,7 @@ public class cattleAddMenu {
         frame.getContentPane() .add(BorderLayout.NORTH, panelN);
         frame.getContentPane() .add(BorderLayout.WEST, panelWMiddle);
         frame.getContentPane() .add(BorderLayout.EAST, panelEMiddle);
+        frame.getContentPane() .add(BorderLayout.SOUTH, panelS);
         frame.setVisible(true);
  
     }
@@ -179,13 +185,18 @@ public class cattleAddMenu {
             frame.dispose();
       }
    }
+
     class saveActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            labelS.setText("Record Saved! Add a New One or Exit");
 //<<<<<<< HEAD
             // Obtener toda la información ingresada en los campos de texto
             int cattleId = Integer.parseInt(TXcattleID.getText());
             String cattleName = TXcattleName.getText();
-            // Obtener otras propiedades del ganado...
+            int cattleBirthdate = Integer.parseInt(TXcattleBirthdate.getText());
+            double cattleLastWeight = Double.parseDouble(TXcattleLastWeight.getText());
+            String cattleSex = TXcattleSex.getText();
+            String cattleBreed = TXcattleBreed.getText();
 
             // Crear un nuevo objeto Cattle con la información recopilada
             Cattle newCattle = new Cattle(cattleId, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
@@ -208,3 +219,7 @@ public class cattleAddMenu {
 //>>>>>>> refs/remotes/origin/main
     
 }
+    
+
+    
+

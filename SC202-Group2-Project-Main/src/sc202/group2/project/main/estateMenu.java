@@ -51,6 +51,7 @@ public class estateMenu {
         buttonAdd.addActionListener( new addActionListener());
         buttonDelete = new JButton("Delete Estate");
         buttonDelete.setMaximumSize(new Dimension(215, 25));
+        buttonDelete.addActionListener( new delActionListener());
         buttonExit = new JButton("Exit");
         buttonExit.setMaximumSize(new Dimension(215, 25));
         buttonExit.addActionListener( new exitActionListener());
@@ -77,7 +78,12 @@ public class estateMenu {
         public void actionPerformed(ActionEvent e) {
             new estateAddMenu();
       }
-   }     
+   }
+    class delActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            new estateDelMenu();
+      }
+   }    
     class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();

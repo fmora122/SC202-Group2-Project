@@ -51,7 +51,7 @@ public class cattleMenu {
         buttonAdd.addActionListener( new addActionListener());
         buttonDelete = new JButton("Delete Cattle");
         buttonDelete.setMaximumSize(new Dimension(215, 25));
-        buttonDelete.addActionListener( new deleteActionListener());
+        buttonDelete.addActionListener( new delActionListener());
         buttonExit = new JButton("Exit");
         buttonExit.setMaximumSize(new Dimension(215, 25));
         buttonExit.addActionListener( new exitActionListener());
@@ -81,13 +81,12 @@ public class cattleMenu {
             allData data = new allData();
             data.allLoaders();
             temp = data.getCattle();
-            System.out.println(temp[25].getCattleName());
-            
+            System.out.println(temp[25].getCattleName());            
       }
-   } 
-    class deleteActionListener implements ActionListener{
+   }
+    class delActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            new cattleAddMenu();
+            new cattleDelMenu();
       }
    }
     class exitActionListener implements ActionListener{

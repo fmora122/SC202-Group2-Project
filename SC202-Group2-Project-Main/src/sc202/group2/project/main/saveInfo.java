@@ -10,6 +10,9 @@ import java.util.ArrayList;
  */
 public class saveInfo {
     private static ArrayList<Cattle> loadData = new ArrayList<Cattle>();
+    //private static ArrayList<Paddock> loadPaddock = new ArrayList<Paddock>();
+    //private static ArrayList<Estate> loadEstate = new ArrayList<Estate>();
+    
     
     public class savePaddock {
    
