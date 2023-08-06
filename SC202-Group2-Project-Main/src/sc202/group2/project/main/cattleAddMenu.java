@@ -146,38 +146,32 @@ public class cattleAddMenu {
     }
     class TXcattleIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXcattleID.getText();
-            cattleID = Integer.parseInt(inputText);
-            //System.out.println(cattleID);
+            cattleID = Integer.parseInt(TXcattleID.getText());
       }
    }
     class TXcattleNameActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String cattleName = TXcattleName.getText();
-            //System.out.println(cattleName);
+            cattleName = TXcattleName.getText();
       }
    }
     class TXcattleBirthdateActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXcattleBirthdate.getText();
-            cattleBirthdate = Integer.parseInt(inputText);
-            //System.out.println(cattleBirthdate);
+            cattleBirthdate = Integer.parseInt(TXcattleBirthdate.getText());
       }
    }
     class TXcattleLastWeightActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXcattleLastWeight.getText();
-            cattleLastWeight = Double.parseDouble(inputText);
+            cattleLastWeight = Double.parseDouble(TXcattleLastWeight.getText());
       }
    }
     class TXcattleSexActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String cattleSex = TXcattleSex.getText();
+            cattleSex = TXcattleSex.getText();
       }
    }
     class TXcattleBreedActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String cattleBreed = TXcattleBreed.getText();
+            cattleBreed = TXcattleBreed.getText();
       }
    }    
     class exitActionListener implements ActionListener{

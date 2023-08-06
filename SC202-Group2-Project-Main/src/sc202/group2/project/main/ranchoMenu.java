@@ -63,7 +63,7 @@ public class ranchoMenu {
         buttonPaddock.addActionListener( new paddockActionListener());
         buttonAnalytics = new JButton("Paddocks Analytics");
         buttonAnalytics.setMaximumSize(new Dimension(215, 25));
-        //buttonAnalytics.addActionListener( new analyticsActionListener());
+        buttonAnalytics.addActionListener( new analyticsActionListener());
         
         frame.addWindowListener(new WindowAdapter() {
          public void windowClosing(WindowEvent windowEvent){

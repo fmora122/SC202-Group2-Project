@@ -77,11 +77,6 @@ public class cattleMenu {
     class addActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             new cattleAddMenu();
-            Cattle temp[] = new Cattle[1];
-            allData data = new allData();
-            data.allLoaders();
-            temp = data.getCattle();
-            System.out.println(temp[25].getCattleName());            
       }
    }
     class delActionListener implements ActionListener{

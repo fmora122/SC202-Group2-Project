@@ -46,6 +46,7 @@ public class paddockStatusMenu {
     private JRadioButton inrest;
     private ButtonGroup buttonGroup;
     private JTextField TXpaddockID;
+    private int numID = 0;
     
     public paddockStatusMenu(){
         paddockStatusMain();
@@ -127,7 +128,8 @@ public class paddockStatusMenu {
     }
     class TXpaddockIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String cattleBreed = TXpaddockID.getText();
+            String inputText = TXpaddockID.getText();
+            numID = Integer.parseInt(inputText);
       }
    }    
     class exitActionListener implements ActionListener{

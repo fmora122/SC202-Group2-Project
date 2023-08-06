@@ -50,6 +50,14 @@ public class paddockAddMenu {
     private JTextField TXammountCattle;
     private JTextField TXwaterCattle;
     private JTextField TXterrainType;
+    private int paddocksId =0;
+    private String paddocksName = "";
+    private String paddocksStatus = "";
+    private int cattleEntryDate =0;
+    private int cattleExitDate =0;
+    private int ammountCattle =0;
+    private String waterCattle = "";
+    private String terrainType ="";
     
         public paddockAddMenu(){
         paddockAddMain();
@@ -147,42 +155,42 @@ public class paddockAddMenu {
     }
     class TXpaddocksIdActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXpaddocksId.getText();
+            paddocksId = Integer.parseInt(TXpaddocksId.getText());
       }
    }
      class TXpaddocksNameActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXpaddocksName.getText();
+            paddocksName = TXpaddocksName.getText();
       }
    }
       class TXpaddocksStatusActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXpaddocksStatus.getText();
+            paddocksStatus = TXpaddocksStatus.getText();
       }
    }
      class TXcattleEntryDateActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXcattleEntryDate.getText();
+            cattleEntryDate = Integer.parseInt(TXcattleEntryDate.getText());
       }
    }
      class TXcattleExitDateActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXcattleExitDate.getText();
+            cattleExitDate = Integer.parseInt(TXcattleExitDate.getText());
       }
    }
      class TXammountCattleActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXammountCattle.getText();
+            ammountCattle = Integer.parseInt(TXammountCattle.getText());
       }
    }
      class TXwaterCattleActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXwaterCattle.getText();
+            waterCattle = TXwaterCattle.getText();
       }
    }
       class TXterrainTypeActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXterrainType.getText();
+            terrainType = TXterrainType.getText();
       }
    }
     class exitActionListener implements ActionListener{

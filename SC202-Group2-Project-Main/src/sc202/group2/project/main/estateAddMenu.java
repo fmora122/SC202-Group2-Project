@@ -49,6 +49,14 @@ public class estateAddMenu {
     private JTextField TXestateNumberPaddocks;
     private JTextField TXestateSize;
     private JTextField TXestateTotalCattle;
+    private String estateName = "";
+    private String estateLocation = "";
+    private String estateManagerName = "";
+    private int estateManagerId =0;
+    private int estateManagerPhone =0;
+    private int estateNumberPaddocks =0;
+    private double estateSize =0;
+    private int estateTotalCattle =0;
     
     public estateAddMenu(){
         estateAddMain();
@@ -146,42 +154,42 @@ public class estateAddMenu {
     }
     class TXestateNameActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateName.getText();
+            estateName = TXestateName.getText();
       }
    }
      class TXestateLocationActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateLocation.getText();
+            estateLocation = TXestateLocation.getText();
       }
    }
       class TXestateManagerNameActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateManagerName.getText();
+            estateManagerName = TXestateManagerName.getText();
       }
    }
      class TXestateManagerIdActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateManagerId.getText();
+            estateManagerId = Integer.parseInt(TXestateManagerId.getText());
       }
    }
      class TXestateManagerPhoneActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateManagerPhone.getText();
+            estateManagerPhone = Integer.parseInt(TXestateManagerPhone.getText());
       }
    }
      class TXestateNumberPaddocksActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateNumberPaddocks.getText();
+            estateNumberPaddocks = Integer.parseInt(TXestateNumberPaddocks.getText());
       }
    }
      class TXestateSizeActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateSize.getText();
+            estateSize = Double.parseDouble(TXestateSize.getText());
       }
    }
       class TXestateTotalCattleActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateTotalCattle.getText();
+            estateTotalCattle = Integer.parseInt(TXestateTotalCattle.getText());
       }
    }
     class exitActionListener implements ActionListener{
