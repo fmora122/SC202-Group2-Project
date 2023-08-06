@@ -179,13 +179,16 @@ public class cattleAddMenu {
             frame.dispose();
       }
    }
+
     class saveActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
             // Obtener toda la información ingresada en los campos de texto
             int cattleId = Integer.parseInt(TXcattleID.getText());
             String cattleName = TXcattleName.getText();
-            // Obtener otras propiedades del ganado...
+            int cattleBirthdate = Integer.parseInt(TXcattleBirthdate.getText());
+            double cattleLastWeight = Double.parseDouble(TXcattleLastWeight.getText());
+            String cattleSex = TXcattleSex.getText();
+            String cattleBreed = TXcattleBreed.getText();
 
             // Crear un nuevo objeto Cattle con la información recopilada
             Cattle newCattle = new Cattle(cattleId, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
@@ -194,17 +197,8 @@ public class cattleAddMenu {
             saveInfo.saveCattle(newCattle);
         }
     }
-=======
-            allData data = new allData();
-            loadData loader = new loadData();
-            Cattle tempCattle[] = new Cattle[1];
-            tempCattle = data.getCattle();            
-            //tempCattle = loader.addNewCattle(tempCattle, 111, "JUANCHO", 13, 1050.6, "Male", "Bavarian");
-            tempCattle = loader.addNewCattle(tempCattle, cattleID, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
-            System.out.println(tempCattle[60].getCattleName());
-            
-        }
-   }
->>>>>>> refs/remotes/origin/main
-    
 }
+    
+
+    
+
