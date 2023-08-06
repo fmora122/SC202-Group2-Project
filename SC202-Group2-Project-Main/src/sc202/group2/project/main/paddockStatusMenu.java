@@ -10,11 +10,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 /**
@@ -39,9 +41,10 @@ public class paddockStatusMenu {
     private JLabel blank1;
     private JLabel blank2;
     private JLabel blank3;
-    private JCheckBox checkbox;
-    private JCheckBox checkbox2;
-    private JCheckBox checkbox3;
+    private JRadioButton available;
+    private JRadioButton busy;
+    private JRadioButton inrest;
+    private ButtonGroup buttonGroup;
     private JTextField TXpaddockID;
     
     public paddockStatusMenu(){
@@ -63,9 +66,14 @@ public class paddockStatusMenu {
         buttonExit.addActionListener( new exitActionListener());
         buttonSave = new JButton("Save");
         buttonSave.addActionListener( new saveActionListener());
-        checkbox = new JCheckBox("checkbox 1");
-        checkbox2 = new JCheckBox("checkbox 2");
-        checkbox3 = new JCheckBox("checkbox 3");
+        available = new JRadioButton("Avaialble");
+        busy = new JRadioButton("Busy");
+        inrest = new JRadioButton("In Rest");
+        buttonGroup = new ButtonGroup();
+        buttonGroup.add(available);
+        buttonGroup.add(busy);
+        buttonGroup.add(inrest);
+        
         
         labelN = new JLabel("Set Paddock Status Menu");
         labelS = new JLabel("");
@@ -89,9 +97,6 @@ public class paddockStatusMenu {
         panelW.add(blank1);
         panelW.add(blank2);
         panelW.add(blank3);
-        panelW.add(checkbox);
-        panelW.add(checkbox2);
-        panelW.add(checkbox3);
         panelW.add(buttonSave);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());
@@ -103,9 +108,9 @@ public class paddockStatusMenu {
         panelE.setLayout(new BoxLayout(panelE, BoxLayout.Y_AXIS));
         panelE.add(Box.createVerticalGlue());
         panelE.add(TXpaddockID);
-        panelE.add(checkbox);
-        panelE.add(checkbox2);
-        panelE.add(checkbox3);
+        panelE.add(available);
+        panelE.add(busy);
+        panelE.add(inrest);
         panelE.add(Box.createVerticalGlue());
 
         panelEMiddle.add(Box.createHorizontalGlue());
@@ -133,7 +138,17 @@ public class paddockStatusMenu {
     class saveActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             labelS.setText("Record Updated! Update Another One or Exit");
-      }
+            String string;
+            if (available.isSelected()) {
+                    string = "Available";
+                } 
+            else if (busy.isSelected()) {
+                    string = "Busy";
+                } 
+            else if (inrest.isSelected()) {
+                    string = "In Rest";
+                }
+        }
    }
 }    
 

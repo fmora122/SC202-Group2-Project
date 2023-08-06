@@ -33,7 +33,8 @@ public class estateDelMenu {
     private JLabel labelS;
     private JButton buttonExit;
     private JButton buttonDel;
-    private JLabel LBestateID; 
+    private JLabel LBestateID;
+    private JLabel blank1;
     private JTextField TXestateID;
     private int numID = 0;
     
@@ -59,8 +60,9 @@ public class estateDelMenu {
         
         labelN = new JLabel("Delete Estate Menu");
         labelS = new JLabel("");
-        LBestateID = new JLabel("Enter the Cattle ID"); 
+        LBestateID = new JLabel("Enter the Estate ID"); 
         LBestateID.setPreferredSize(new Dimension(135,19));
+        blank1 = new JLabel(" ");
         
         TXestateID = new JTextField(20); 
         TXestateID.addActionListener(new TXestateIDActionListener());
@@ -70,6 +72,7 @@ public class estateDelMenu {
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
         panelW.add(Box.createVerticalGlue());
         panelW.add(LBestateID);
+        panelW.add(blank1);
         panelW.add(buttonDel);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());

@@ -33,7 +33,8 @@ public class paddockDelMenu {
     private JLabel labelS;
     private JButton buttonExit;
     private JButton buttonDel;
-    private JLabel LBpaddockID; 
+    private JLabel LBpaddockID;
+    private JLabel blank1;
     private JTextField TXcpaddockID;
     private int numID = 0;
     
@@ -43,7 +44,7 @@ public class paddockDelMenu {
     public void paddockDelMain() {
         
         frame = new JFrame();
-        frame.setSize(400, 300);
+        frame.setSize(420, 300);
         
         panelN = new JPanel();
         panelW = new JPanel();
@@ -59,8 +60,9 @@ public class paddockDelMenu {
         
         labelN = new JLabel("Delete Paddock Menu");
         labelS = new JLabel("");
-        LBpaddockID = new JLabel("Enter the Cattle ID"); 
-        LBpaddockID.setPreferredSize(new Dimension(135,19));
+        LBpaddockID = new JLabel("Enter the Paddock ID"); 
+        LBpaddockID.setPreferredSize(new Dimension(149,19));
+        blank1 = new JLabel(" ");
         
         TXcpaddockID = new JTextField(20); 
         TXcpaddockID.addActionListener(new TXcpaddockIDActionListener());
@@ -70,6 +72,7 @@ public class paddockDelMenu {
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
         panelW.add(Box.createVerticalGlue());
         panelW.add(LBpaddockID);
+        panelW.add(blank1);
         panelW.add(buttonDel);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());

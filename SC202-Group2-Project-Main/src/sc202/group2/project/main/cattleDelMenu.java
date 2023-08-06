@@ -34,6 +34,7 @@ public class cattleDelMenu {
     private JButton buttonExit;
     private JButton buttonDel;
     private JLabel LBcattleID; 
+    private JLabel blank1;
     private JTextField TXcattleID;
     private int numID = 0;
     
@@ -61,6 +62,7 @@ public class cattleDelMenu {
         labelS = new JLabel("");
         LBcattleID = new JLabel("Enter the Cattle ID"); 
         LBcattleID.setPreferredSize(new Dimension(135,19));
+        blank1 = new JLabel(" ");
         
         TXcattleID = new JTextField(20); 
         TXcattleID.addActionListener(new TXcattleIDActionListener());
@@ -70,6 +72,7 @@ public class cattleDelMenu {
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
         panelW.add(Box.createVerticalGlue());
         panelW.add(LBcattleID);
+        panelW.add(blank1);
         panelW.add(buttonDel);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());
