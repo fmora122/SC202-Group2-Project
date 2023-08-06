@@ -35,6 +35,7 @@ public class cattleDelMenu {
     private JButton buttonDel;
     private JLabel LBcattleID; 
     private JTextField TXcattleID;
+    private int numID = 0;
     
     public cattleDelMenu(){
         cattleDelMain();
@@ -96,7 +97,8 @@ public class cattleDelMenu {
     }
     class TXcattleIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String cattleBreed = TXcattleID.getText();
+            String inputText = TXcattleID.getText();
+            numID = Integer.parseInt(inputText);
       }
    }    
     class exitActionListener implements ActionListener{

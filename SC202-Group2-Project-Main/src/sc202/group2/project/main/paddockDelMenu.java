@@ -35,6 +35,7 @@ public class paddockDelMenu {
     private JButton buttonDel;
     private JLabel LBpaddockID; 
     private JTextField TXcpaddockID;
+    private int numID = 0;
     
     public paddockDelMenu(){
         paddockDelMain();
@@ -56,7 +57,7 @@ public class paddockDelMenu {
         buttonDel = new JButton("Delete");
         buttonDel.addActionListener( new delActionListener());
         
-        labelN = new JLabel("Delete Cattle Menu");
+        labelN = new JLabel("Delete Paddock Menu");
         labelS = new JLabel("");
         LBpaddockID = new JLabel("Enter the Cattle ID"); 
         LBpaddockID.setPreferredSize(new Dimension(135,19));
@@ -96,7 +97,8 @@ public class paddockDelMenu {
     }
     class TXcpaddockIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String cattleBreed = TXcpaddockID.getText();
+            String inputText = TXcpaddockID.getText();
+            numID = Integer.parseInt(inputText);
       }
    }    
     class exitActionListener implements ActionListener{

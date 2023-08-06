@@ -35,6 +35,7 @@ public class estateDelMenu {
     private JButton buttonDel;
     private JLabel LBestateID; 
     private JTextField TXestateID;
+    private int numID = 0;
     
     public estateDelMenu(){
         estateDelMain();
@@ -56,7 +57,7 @@ public class estateDelMenu {
         buttonDel = new JButton("Delete");
         buttonDel.addActionListener( new delActionListener());
         
-        labelN = new JLabel("Delete Cattle Menu");
+        labelN = new JLabel("Delete Estate Menu");
         labelS = new JLabel("");
         LBestateID = new JLabel("Enter the Cattle ID"); 
         LBestateID.setPreferredSize(new Dimension(135,19));
@@ -96,7 +97,8 @@ public class estateDelMenu {
     }
     class TXestateIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String cattleBreed = TXestateID.getText();
+            String inputText = TXestateID.getText();
+            numID = Integer.parseInt(inputText);
       }
    }    
     class exitActionListener implements ActionListener{
