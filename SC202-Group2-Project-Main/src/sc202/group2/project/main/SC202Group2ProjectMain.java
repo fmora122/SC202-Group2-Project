@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class SC202Group2ProjectMain {
 
     public static void main(String[] args) {
-        
+        String filePath = "C:/Users/chris/Documents/Progra/Proyecto/SC202-Group2-Project/SC202-Group2-Project-Main/src/sc202/group2/project/Cattle_Info.txt";
         ranchoMenu menu = new ranchoMenu();
 
     } 
