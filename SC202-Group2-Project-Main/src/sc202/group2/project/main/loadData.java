@@ -73,7 +73,7 @@ public class loadData {
         mycattle[57] = new Cattle(10062, "Paula", 04, 800, "Female", "Montbeliarde");
         mycattle[58] = new Cattle(10963, "Saturnino", 01, 1220.4, "Male", "Holstein");
         mycattle[59] = new Cattle(11064, "Mark", 9, 1020.5, "Male", "Bavarian");
-        saveInfo.saveCattle(mycattle, "Cattle_Info.txt");
+        
         return mycattle;
         
     }

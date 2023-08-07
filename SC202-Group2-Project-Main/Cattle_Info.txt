@@ -58,3 +58,17 @@
 10062,Paula,4,800.0,,Montbeliarde
 10963,Saturnino,1,1220.4,,Holstein
 11064,Mark,9,1020.5,,Bavarian
+Cattle ID: 10258
+Cattle Name: juan
+Cattle Birthdate: 25
+Cattle Last Weight: 25.0
+Cattle Gender: male
+Cattle Breed: juh
+================================
+Cattle ID: 10251
+Cattle Name: kul
+Cattle Birthdate: 45
+Cattle Last Weight: 700.0
+Cattle Gender: male
+Cattle Breed: hyu
+================================
