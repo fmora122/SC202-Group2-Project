@@ -1,0 +1,9 @@
+Paddock ID: 2560
+Paddock Name: Puerto
+Paddock Status: Libre
+Cattle Ingress Date: 10/5/2023
+Cattle Egress Date: 21/5/2023
+Cattle Ammount: 8
+Water (L): 8
+Terrain Type: field
+================================
