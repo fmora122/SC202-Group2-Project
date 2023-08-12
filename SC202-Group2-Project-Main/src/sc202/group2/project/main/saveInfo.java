@@ -46,16 +46,16 @@ public class saveInfo {
                 printWriter.close();
                 fileWriter.close();
 
-                System.out.println("Paddock information saved successfully.");
+                JOptionPane.showMessageDialog(null,"Paddock information saved successfully.");
 
             } catch (IOException e) {
-                System.err.println("Error while saving paddock information: " + e.getMessage());
+                JOptionPane.showMessageDialog(null,"Error while saving paddock information: " + e.getMessage());
             }
         }
     }
 
     public static class saveEstate {
-        public static void saveEstateInfo(String estateName, String estateLocation, String estateManagerName, String estateManagerId, String estateManagerPhone, String estateNumberPaddocks, String estateSize, String estateTotalCattle) {
+        public static void saveEstateInfo(/*int estateID,*/String estateName, String estateLocation, String estateManagerName, String estateManagerId, String estateManagerPhone, String estateNumberPaddocks, String estateSize, String estateTotalCattle) {
             //Ruta del archivo
             String rootDir = System.getProperty("user.dir");
             String fileName = "Estate_Info.txt";
@@ -83,10 +83,10 @@ public class saveInfo {
                 printWriter.close();
                 fileWriter.close();
 
-                System.out.println("Estate information saved successfully.");
+                JOptionPane.showMessageDialog(null,"Estate information saved successfully.");
 
             } catch (IOException e) {
-                System.err.println("Error while saving estate information: " + e.getMessage());
+                JOptionPane.showMessageDialog(null,"Error while saving estate information: " + e.getMessage());
             }
         }
     }
@@ -147,4 +147,39 @@ public class saveInfo {
         return false;
 
     }
+    private static boolean PaddockIDUsed(int paddocksId) throws IOException {
+        //String filePath = "/home/fmora/NetBeansProjects/SC202-Group2-Project/SC202-Group2-Project-Main/Cattle_Info"; //
+        String rootDir = System.getProperty("user.dir");
+        String fileName = "Paddock_Info.txt";
+        String filePath = rootDir + "/" + fileName;
+        
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.startsWith("Paddock ID: " + paddocksId)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+        
+    }
+    /*private static boolean EstateIDUsed(int estateID) throws IOException {
+        //String filePath = "/home/fmora/NetBeansProjects/SC202-Group2-Project/SC202-Group2-Project-Main/Cattle_Info"; //
+        String rootDir = System.getProperty("user.dir");
+        String fileName = "Estate_Info.txt";
+        String filePath = rootDir + "/" + fileName;
+        
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.startsWith("Estate ID: " + estateID)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }*/
 }
