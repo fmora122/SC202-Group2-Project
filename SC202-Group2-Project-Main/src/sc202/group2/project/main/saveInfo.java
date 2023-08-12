@@ -8,6 +8,7 @@ import java.io.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,7 +19,7 @@ public class saveInfo {
     public static class savePaddock {
         public static void savePaddockInfo(int paddocksId, String paddocksName, String paddocksStatus, String cattleEntryDate, String cattleExitDate, String ammountCattle, String waterCattle, String terrainType) {
             //Ruta del archivo
-            String filePath = "C:\\Users\\chris\\Documents\\Progra\\Proyecto\\SC202-Group2-Project\\SC202-Group2-Project-Main\\src\\sc202\\group2\\project\\Paddock_Info.txt"; 
+            String filePath = ".\\SC202-Group2-Project\\SC202-Group2-Project-Main\\src\\sc202\\group2\\project\\Paddock_Info.txt"; 
 
             try {
                 // Crear o abrir el archivo para escritura
@@ -54,7 +55,7 @@ public class saveInfo {
     public static class saveEstate {
         public static void saveEstateInfo(String estateName, String estateLocation, String estateManagerName, String estateManagerId, String estateManagerPhone, String estateNumberPaddocks, String estateSize, String estateTotalCattle) {
             //Ruta del archivo
-            String filePath = "C:\\Users\\chris\\Documents\\Progra\\Proyecto\\SC202-Group2-Project\\SC202-Group2-Project-Main\\src\\sc202\\group2\\project\\Estate_Info.txt"; 
+            String filePath = ".\\SC202-Group2-Project\\SC202-Group2-Project-Main\\src\\sc202\\group2\\project\\Estate_Info.txt"; 
 
             try {
                 // Crear o abrir el archivo para escritura
@@ -88,7 +89,7 @@ public class saveInfo {
     }
 
     public static void saveCattle(int cattleID, String cattleName, int cattleBirthdate, double cattleLastWeight, String cattleSexString, String cattleBreed) {
-        String filePath = "C:\\Users\\chris\\Documents\\Progra\\Proyecto\\SC202-Group2-Project\\SC202-Group2-Project-Main\\src\\sc202\\group2\\project\\Cattle_Info"; 
+        String filePath = ".\\SC202-Group2-Project\\SC202-Group2-Project-Main\\src\\sc202\\group2\\project\\Cattle_Info"; 
 
         try {
 
@@ -115,15 +116,15 @@ public class saveInfo {
             printWriter.close();
             fileWriter.close();
 
-            System.out.println("Cattle information saved successfully.");
+            JOptionPane.showMessageDialog(null,"Cattle information saved successfully.");
 
         } catch (IOException e) {
-            System.err.println("Error while saving cattle information: " + e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error while saving cattle information: " + e.getMessage());
         }
     }
 
     private static boolean CattleIDUsed(int cattleID) throws IOException {
-        String filePath = "C:\\Users\\chris\\Documents\\Progra\\Proyecto\\SC202-Group2-Project\\SC202-Group2-Project-Main\\src\\sc202\\group2\\project\\Cattle_Info"; //
+        String filePath = ".\\SC202-Group2-Project\\SC202-Group2-Project-Main\\src\\sc202\\group2\\project\\Cattle_Info"; //
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
             String line;
