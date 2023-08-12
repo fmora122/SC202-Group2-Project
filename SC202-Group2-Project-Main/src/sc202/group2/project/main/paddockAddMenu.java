@@ -200,10 +200,25 @@ public class paddockAddMenu {
             frame.dispose();
       }
    }
-    class saveActionListener implements ActionListener{
-        public void actionPerformed(ActionEvent e) {
-            labelS.setText("Record Saved! Add a New One or Exit");
-      }
-   }
+class saveActionListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+        
+        // Datos necesarios desde tus campos de texto
+        int paddocksId = Integer.parseInt(TXpaddocksId.getText());
+        String paddocksName = TXpaddocksName.getText();
+        String paddocksStatus = TXpaddocksStatus.getText();
+        String cattleEntryDate = TXcattleEntryDate.getText();
+        String cattleExitDate = TXcattleExitDate.getText();
+        String ammountCattle = TXammountCattle.getText();
+        String waterCattle = TXammountCattle.getText();
+        String terrainType = TXterrainType.getText();
+        
+        // Llamar al método savePaddock de la clase saveInfo
+        saveInfo.savePaddock.savePaddockInfo(paddocksId, paddocksName, paddocksStatus, cattleEntryDate, cattleExitDate, ammountCattle, waterCattle, terrainType);
+        
+        // Actualizar el mensaje en la interfaz gráfica
+        labelS.setText("Paddock Record Saved! Add a New One or Exit");
+    }
+}
 
 }

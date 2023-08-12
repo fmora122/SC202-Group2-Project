@@ -197,10 +197,27 @@ public class estateAddMenu {
             frame.dispose();
       }
    }
-   class saveActionListener implements ActionListener{
-        public void actionPerformed(ActionEvent e) {
-            labelS.setText("Record Saved! Add a New One or Exit");
-      }
-   } 
+class saveActionListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+        labelS.setText("Record Saved! Add a New One or Exit");
+        
+        // Obtener la información ingresada en los campos de texto
+        //int estateId = Integer.parseInt(TXestateID.getText());
+        String estateName = TXestateName.getText();
+        String estateLocation= TXestateLocation.getText();
+        String estateManagerName = TXestateManagerName.getText();
+        String estateManagerId = TXestateManagerId.getText();
+        String estateManagerPhone = TXestateManagerPhone.getText();
+        String estateNumberPaddocks = TXestateNumberPaddocks.getText();
+        String estateSize = TXestateSize.getText();
+        String estateTotalCattle = TXestateTotalCattle.getText();
+        
+        // Llamar al método saveEstate de la clase saveInfo
+        saveInfo.saveEstate.saveEstateInfo(estateName,  estateLocation, estateManagerName, estateManagerId, estateManagerPhone,  estateNumberPaddocks,  estateSize,  estateTotalCattle);
+        
+        // Actualizar el mensaje en la interfaz gráfica
+        labelS.setText("Estate Record Saved! Add a New One or Exit");
+    }
+}
 
 }

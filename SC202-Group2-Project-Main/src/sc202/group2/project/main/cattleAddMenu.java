@@ -193,10 +193,10 @@ public class cattleAddMenu {
             String cattleBreed = TXcattleBreed.getText();
 
             // Crear un nuevo objeto Cattle con la información recopilada
-            Cattle newCattle = new Cattle(cattleId, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
-
+            saveInfo.saveCattle(cattleId, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
+            
             // Llamar al método saveCattle de la clase saveInfo, pasando el nuevo objeto Cattle
-            saveInfo.saveCattle(newCattle);
+            labelS.setText("Cattle Record Saved! Add a New One or Exit");
         }
     }
 //=======
