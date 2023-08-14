@@ -16,3 +16,12 @@ Estate Address: 9
 Estate Address: 9
 Estate Address: 9
 ================================
+Estate Name: el Rancho
+Estate Address: Alajuela
+Estate Address: Ramon
+Estate Address: 1541256161
+Estate Address: 677811621
+Estate Address: 12
+Estate Address: 67
+Estate Address: 4
+================================

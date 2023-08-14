@@ -165,7 +165,7 @@ public class saveInfo {
         return false;
         
     }
-    /*private static boolean EstateIDUsed(int estateID) throws IOException {
+    private static boolean EstateIDUsed(int estateManagerId) throws IOException {
         //String filePath = "/home/fmora/NetBeansProjects/SC202-Group2-Project/SC202-Group2-Project-Main/Cattle_Info"; //
         String rootDir = System.getProperty("user.dir");
         String fileName = "Estate_Info.txt";
@@ -174,12 +174,12 @@ public class saveInfo {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                if (line.startsWith("Estate ID: " + estateID)) {
+                if (line.startsWith("Estate ID: " + estateManagerId)) {
                     return true;
                 }
             }
         }
 
         return false;
-    }*/
+    }
 }
