@@ -8,9 +8,6 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -24,7 +21,6 @@ import javax.swing.JTextField;
  * @author fmora
  */
 public class cattleDelMenu {
-
     private JFrame frame;
     private JPanel panelN;
     private JPanel panelW;
@@ -37,20 +33,19 @@ public class cattleDelMenu {
     private JLabel labelS;
     private JButton buttonExit;
     private JButton buttonDel;
-    private JLabel LBcattleID;
+    private JLabel LBcattleID; 
     private JLabel blank1;
     private JTextField TXcattleID;
     private int numID = 0;
-
-    public cattleDelMenu() {
+    
+    public cattleDelMenu(){
         cattleDelMain();
     }
-
     public void cattleDelMain() {
-
+        
         frame = new JFrame();
         frame.setSize(400, 300);
-
+        
         panelN = new JPanel();
         panelW = new JPanel();
         panelE = new JPanel();
@@ -59,19 +54,19 @@ public class cattleDelMenu {
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
         buttonExit = new JButton("Exit");
-        buttonExit.addActionListener(new exitActionListener());
+        buttonExit.addActionListener( new exitActionListener());
         buttonDel = new JButton("Delete");
-        buttonDel.addActionListener(new delActionListener());
-
+        buttonDel.addActionListener( new delActionListener());
+        
         labelN = new JLabel("Delete Cattle Menu");
         labelS = new JLabel("");
-        LBcattleID = new JLabel("Enter the Cattle ID");
-        LBcattleID.setPreferredSize(new Dimension(135, 19));
+        LBcattleID = new JLabel("Enter the Cattle ID"); 
+        LBcattleID.setPreferredSize(new Dimension(135,19));
         blank1 = new JLabel(" ");
-
-        TXcattleID = new JTextField(20);
+        
+        TXcattleID = new JTextField(20); 
         TXcattleID.addActionListener(new TXcattleIDActionListener());
-
+        
         panelN.add(labelN);
         panelS.add(labelS);
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
@@ -81,11 +76,11 @@ public class cattleDelMenu {
         panelW.add(buttonDel);
         panelW.add(buttonExit);
         panelW.add(Box.createVerticalGlue());
-
+        
         panelWMiddle.add(Box.createHorizontalGlue());
         panelWMiddle.add(panelW);
         panelWMiddle.add(Box.createHorizontalGlue());
-
+        
         panelE.setLayout(new BoxLayout(panelE, BoxLayout.Y_AXIS));
         panelE.add(Box.createVerticalGlue());
         panelE.add(TXcattleID);
@@ -94,41 +89,30 @@ public class cattleDelMenu {
         panelEMiddle.add(Box.createHorizontalGlue());
         panelEMiddle.add(panelE);
         panelEMiddle.add(Box.createHorizontalGlue());
-
+  
         frame.setTitle("Fincas Anónimas S.A");
-        frame.getContentPane().add(BorderLayout.NORTH, panelN);
-        frame.getContentPane().add(BorderLayout.WEST, panelWMiddle);
-        frame.getContentPane().add(BorderLayout.EAST, panelEMiddle);
-        frame.getContentPane().add(BorderLayout.SOUTH, panelS);
+        frame.getContentPane() .add(BorderLayout.NORTH, panelN);
+        frame.getContentPane() .add(BorderLayout.WEST, panelWMiddle);
+        frame.getContentPane() .add(BorderLayout.EAST, panelEMiddle);
+        frame.getContentPane() .add(BorderLayout.SOUTH, panelS);
         frame.setVisible(true);
-
+ 
     }
-
-    class TXcattleIDActionListener implements ActionListener {
-
+    class TXcattleIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String inputText = TXcattleID.getText();
             numID = Integer.parseInt(inputText);
-        }
-    }
-
-    class exitActionListener implements ActionListener {
-
+      }
+   }    
+    class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
-        }
-    }
-
-    class delActionListener implements ActionListener {
-
+      }
+   }
+    class delActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            try {
-                removeInfo.removeCattle(Integer.parseInt(TXcattleID.getText()));
-                labelS.setText("Record Deleted! Delete Another One or Exit");
-            } catch (IOException ex) {
-                Logger.getLogger(cattleDelMenu.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }
-
+            labelS.setText("Record Deleted! Delete Another One or Exit");
+      }
+   }
+    
 }
