@@ -16,7 +16,7 @@ public class Cattle {
     private String cattleSex = "";
     private String cattleBreed = "";
 
-    public Cattle(int cattleID, String cattleName, int cattleBirthdate, double cattleLastWeight, String cattleSexString, String cattleBreed) {
+    public Cattle(int cattleID, String cattleName, int cattleBirthdate, double cattleLastWeight, String cattleSex, String cattleBreed) {
         this.cattleID = cattleID; 
         this.cattleName = cattleName;
         this.cattleBirthdate = cattleBirthdate;

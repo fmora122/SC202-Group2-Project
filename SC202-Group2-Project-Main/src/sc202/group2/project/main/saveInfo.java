@@ -119,6 +119,7 @@ public class saveInfo {
 
         } catch (IOException e) {
             System.err.println("Error while saving cattle information: " + e.getMessage());
+            //labelS.setText("Record Saved! Add a New One or Exit");
         }
     }
 
