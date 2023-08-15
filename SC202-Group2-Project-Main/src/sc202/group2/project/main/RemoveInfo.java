@@ -7,88 +7,108 @@ package sc202.group2.project.main;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 /**
  *
- * @author Josuel Rodriguez
+ * @author 
  */
+public class removeInfo {
+    
+    public static boolean removeCattle(int cattleID) throws FileNotFoundException, IOException {
 
-  public class RemoveInfo {
-    private String filename;
+        File inputFile = new File(constants.fileCattlePath);
+        File tempFile = new File(constants.fileCattlePath + ".tmp");
 
-    public RemoveInfo(String filename) {
-        this.filename = filename;
-    }
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-    public void removeCattle(String cattleId) {
-        removeEntry(cattleId, "Cattle");
-    }
+        String currentLine;
 
-    public void removeState(String stateId) {
-        removeEntry(stateId, "State");
-    }
+        int cattleLines = 7;
+        boolean flag = false;
 
-    public void removePadock(String padockId) {
-        removeEntry(padockId, "Padock");
-    }
-
-    private void removeEntry(String id, String dataType) {
-        try {
-            File inputFile = new File(filename);
-            File tempFile = new File("temp.txt");
-
-            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
-
-            String lineToRemove = dataType + " ID: " + id;
-            String currentLine;
-
-            while ((currentLine = reader.readLine()) != null) {
-                if (currentLine.contains(lineToRemove)) {
-                    continue;
-                }
-                writer.write(currentLine + System.getProperty("line.separator"));
+        while ((currentLine = reader.readLine()) != null) {
+            if (currentLine.startsWith("Cattle ID: " + cattleID)) {
+                cattleLines--;
+                flag = true;
+                continue;
             }
-            writer.close();
-            reader.close();
-
-            inputFile.delete();
-            tempFile.renameTo(inputFile);
-
-            System.out.println(dataType + " with ID " + id + " removed successfully.");
-        } catch (IOException e) {
-            System.err.println("Error: " + e.getMessage());
+            if (cattleLines > 0 && flag) {
+                cattleLines--;
+                continue;
+            }
+            writer.write(currentLine + System.getProperty("line.separator"));
         }
+        writer.close();
+        reader.close();
+        inputFile.delete();
+        boolean successful = tempFile.renameTo(inputFile);
+        return flag;
     }
+    public static boolean removeEstate(String EstateName) throws FileNotFoundException, IOException {
 
-    public static void main(String[] args) {
-        RemoveInfo remover = new RemoveInfo("data.txt");
+        File inputFile = new File(constants.fileEstatePath);
+        File tempFile = new File(constants.fileEstatePath + ".tmp");
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Select data type to remove (Cattle/State/Padock):");
-        String dataType = scanner.nextLine();
-        
-        System.out.println("Enter ID to remove:");
-        String id = scanner.nextLine();
-        
-        switch (dataType.toLowerCase()) {
-            case "cattle":
-                remover.removeCattle(id);
-                break;
-            case "state":
-                remover.removeState(id);
-                break;
-            case "padock":
-                remover.removePadock(id);
-                break;
-            default:
-                System.out.println("Invalid data type.");
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+        String currentLine;
+
+        int cattleLines = 9;
+        boolean flag = false;
+
+        while ((currentLine = reader.readLine()) != null) {
+            if (currentLine.startsWith("Estate Name: " + EstateName)) {
+                cattleLines--;
+                flag = true;
+                continue;
+            }
+            if (cattleLines > 0 && flag) {
+                cattleLines--;
+                continue;
+            }
+            writer.write(currentLine + System.getProperty("line.separator"));
         }
-        
-        scanner.close();
+        writer.close();
+        reader.close();
+        inputFile.delete();
+        boolean successful = tempFile.renameTo(inputFile);
+        return flag;
+    }
+    public static boolean removePaddok(int PaddokId) throws FileNotFoundException, IOException {
+
+        File inputFile = new File(constants.filePaddokPath);
+        File tempFile = new File(constants.filePaddokPath + ".tmp");
+
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+        String currentLine;
+
+        int cattleLines = 9;
+        boolean flag = false;
+
+        while ((currentLine = reader.readLine()) != null) {
+            if (currentLine.startsWith("Paddock ID: " + PaddokId)) {
+                cattleLines--;
+                flag = true;
+                continue;
+            }
+            if (cattleLines > 0 && flag) {
+                cattleLines--;
+                continue;
+            }
+            writer.write(currentLine + System.getProperty("line.separator"));
+        }
+        writer.close();
+        reader.close();
+        inputFile.delete();
+        boolean successful = tempFile.renameTo(inputFile);
+        return flag;
     }
 }
