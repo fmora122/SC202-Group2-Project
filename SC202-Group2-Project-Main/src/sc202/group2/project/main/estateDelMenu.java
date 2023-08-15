@@ -123,12 +123,8 @@ public class estateDelMenu {
 
         public void actionPerformed(ActionEvent e) {
 
-            try {
-                removeInfo.removeEstate(TXestateID.getText());
                 labelS.setText("Record Deleted! Delete Another One or Exit");
-            } catch (IOException ex) {
-                Logger.getLogger(estateDelMenu.class.getName()).log(Level.SEVERE, null, ex);
-            }
+
         }
     }
 

@@ -122,12 +122,10 @@ public class cattleDelMenu {
     class delActionListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            try {
-                removeInfo.removeCattle(Integer.parseInt(TXcattleID.getText()));
-                labelS.setText("Record Deleted! Delete Another One or Exit");
-            } catch (IOException ex) {
-                Logger.getLogger(cattleDelMenu.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            int cattleIDToDelete = numID; // Obtener el ID de ganado a eliminar
+            RemoveInfo remover = new RemoveInfo();
+            remover.removeCattle(cattleIDToDelete); // Llamar al método removeCattle
+            labelS.setText("Record Deleted! Delete Another One or Exit");
         }
     }
 

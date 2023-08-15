@@ -66,15 +66,14 @@ public class saveInfo {
                 PrintWriter printWriter = new PrintWriter(fileWriter);
 
                 // Escribir la información en el archivo
-                //printWriter.println("Estate ID: " + estateID);
                 printWriter.println("Estate Name: " + estateName);
-                printWriter.println("Estate Address: " + estateLocation);
-                printWriter.println("Estate Address: " + estateManagerName);
-                printWriter.println("Estate Address: " + estateManagerId);
-                printWriter.println("Estate Address: " + estateManagerPhone);
-                printWriter.println("Estate Address: " + estateNumberPaddocks);
-                printWriter.println("Estate Address: " + estateSize);
-                printWriter.println("Estate Address: " + estateTotalCattle);
+                printWriter.println("Estate Location: " + estateLocation);
+                printWriter.println("Estate Manager name: " + estateManagerName);
+                printWriter.println("Estate Manager ID: " + estateManagerId);
+                printWriter.println("Estate Manager phone#: " + estateManagerPhone);
+                printWriter.println("Estate Paddocks number: " + estateNumberPaddocks);
+                printWriter.println("Estate Size: " + estateSize);
+                printWriter.println("Estate Total Cattle: " + estateTotalCattle);
 
                 // Separador entre registros
                 printWriter.println("================================");
@@ -92,7 +91,7 @@ public class saveInfo {
     }
 
     public static void saveCattle(int cattleID, String cattleName, int cattleBirthdate, double cattleLastWeight, String cattleSexString, String cattleBreed) {
-        //String filePath = "/home/fmora/NetBeansProjects/SC202-Group2-Project/SC202-Group2-Project-Main/Cattle_Info"; 
+         
         String rootDir = System.getProperty("user.dir");
         String fileName = "Cattle_Info";
         String filePath = rootDir + "/" + fileName;
@@ -125,17 +124,14 @@ public class saveInfo {
             JOptionPane.showMessageDialog(null,"Cattle information saved successfully.");
 
         } catch (IOException e) {
-<<<<<<< HEAD
-            System.err.println("Error while saving cattle information: " + e.getMessage());
-            //labelS.setText("Record Saved! Add a New One or Exit");
-=======
+
             JOptionPane.showMessageDialog(null,"Error while saving cattle information: " + e.getMessage());
->>>>>>> 3788f22d8819296be6e0ba7378192d2ba716d7b1
+
         }
     }
 
     private static boolean CattleIDUsed(int cattleID) throws IOException {
-        //String filePath = "/home/fmora/NetBeansProjects/SC202-Group2-Project/SC202-Group2-Project-Main/Cattle_Info"; //
+
         String rootDir = System.getProperty("user.dir");
         String fileName = "Cattle_Info";
         String filePath = rootDir + "/" + fileName;
@@ -153,7 +149,7 @@ public class saveInfo {
 
     }
     private static boolean PaddockIDUsed(int paddocksId) throws IOException {
-        //String filePath = "/home/fmora/NetBeansProjects/SC202-Group2-Project/SC202-Group2-Project-Main/Cattle_Info"; //
+        
         String rootDir = System.getProperty("user.dir");
         String fileName = "Paddock_Info.txt";
         String filePath = rootDir + "/" + fileName;
@@ -171,7 +167,7 @@ public class saveInfo {
         
     }
     private static boolean EstateIDUsed(int estateManagerId) throws IOException {
-        //String filePath = "/home/fmora/NetBeansProjects/SC202-Group2-Project/SC202-Group2-Project-Main/Cattle_Info"; //
+        
         String rootDir = System.getProperty("user.dir");
         String fileName = "Estate_Info.txt";
         String filePath = rootDir + "/" + fileName;
