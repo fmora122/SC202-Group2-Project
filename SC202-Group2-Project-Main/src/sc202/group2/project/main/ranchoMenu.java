@@ -93,6 +93,8 @@ public class ranchoMenu {
     
     class cattleActionListener implements ActionListener{
       public void actionPerformed(ActionEvent e) {
+          String workingDirectory = System.getProperty("user.dir");
+          System.out.println(workingDirectory);
           new cattleMenu();
       }
    }  
