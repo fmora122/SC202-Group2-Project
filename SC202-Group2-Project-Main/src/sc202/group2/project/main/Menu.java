@@ -21,62 +21,48 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author fmora
+ * @author Josuel Rodriguez
  */
-public class estateDelMenu {
 
-    private JFrame frame;
-    private JPanel panelN;
-    private JPanel panelW;
-    private JPanel panelE;
-    private JPanel panelS;
-    private JPanel panelWMiddle;
-    private JPanel panelEMiddle;
-    private JPanel panelMiddle;
-    private JLabel labelN;
-    private JLabel labelS;
-    private JButton buttonExit;
-    private JButton buttonDel;
-    private JLabel LBestateID;
-    private JLabel blank1;
-    private JTextField TXestateID;
-    private int numID = 0;
+    public class Menu {
 
-    public estateDelMenu() {
-        estateDelMain();
+   
+
+    public MenuleDelMenu() {
+        cattleDelMain();
     }
 
-    public void estateDelMain() {
+    public void cattleDelMain() {
 
-        frame = new JFrame();
+        JFrame frame = new JFrame();
         frame.setSize(400, 300);
 
-        panelN = new JPanel();
-        panelW = new JPanel();
-        panelE = new JPanel();
-        panelS = new JPanel();
-        panelWMiddle = new JPanel();
-        panelEMiddle = new JPanel();
-        panelMiddle = new JPanel();
-        buttonExit = new JButton("Exit");
-        buttonExit.addActionListener(new exitActionListener());
-        buttonDel = new JButton("Delete");
+        JPanel panelN = new JPanel();
+        JPanel panelW = new JPanel();
+        JPanel panelE = new JPanel();
+        JPanel panelS = new JPanel();
+        JPanel panelWMiddle = new JPanel();
+        JPanel panelEMiddle = new JPanel();
+        JPanel panelMiddle = new JPanel();
+        JButton buttonExit = new JButton("Exit");
+        buttonExit.addActionListener((ActionListener) new exitActionListener());
+        JButton buttonDel = new JButton("Delete");
         buttonDel.addActionListener(new delActionListener());
 
-        labelN = new JLabel("Delete Estate Menu");
-        labelS = new JLabel("");
-        LBestateID = new JLabel("Enter the Estate Name");
-        LBestateID.setPreferredSize(new Dimension(135, 19));
-        blank1 = new JLabel(" ");
+        JLabel labelN = new JLabel("Delete Cattle Menu");
+        JLabel labelS = new JLabel("");
+        JLabel LBcattleID = new JLabel("Enter the Cattle ID");
+        LBcattleID.setPreferredSize(new Dimension(135, 19));
+        JLabel blank1 = new JLabel(" ");
 
-        TXestateID = new JTextField(20);
-        TXestateID.addActionListener(new TXestateIDActionListener());
+        JTextField TXcattleID = new JTextField(20);
+        TXcattleID.addActionListener(new TXcattleIDActionListener());
 
         panelN.add(labelN);
         panelS.add(labelS);
         panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
         panelW.add(Box.createVerticalGlue());
-        panelW.add(LBestateID);
+        panelW.add(LBcattleID);
         panelW.add(blank1);
         panelW.add(buttonDel);
         panelW.add(buttonExit);
@@ -88,7 +74,7 @@ public class estateDelMenu {
 
         panelE.setLayout(new BoxLayout(panelE, BoxLayout.Y_AXIS));
         panelE.add(Box.createVerticalGlue());
-        panelE.add(TXestateID);
+        panelE.add(TXcattleID);
         panelE.add(Box.createVerticalGlue());
 
         panelEMiddle.add(Box.createHorizontalGlue());
@@ -104,11 +90,11 @@ public class estateDelMenu {
 
     }
 
-    class TXestateIDActionListener implements ActionListener {
+    class TXcattleIDActionListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateID.getText();
-            numID = Integer.parseInt(inputText);
+            String inputText = TXcattleID.getText();
+            int numID = Integer.parseInt(inputText);
         }
     }
 
@@ -122,14 +108,10 @@ public class estateDelMenu {
     class delActionListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-
-            try {
-                removeInfo.removeEstate(TXestateID.getText());
-                labelS.setText("Record Deleted! Delete Another One or Exit");
-            } catch (IOException ex) {
-                Logger.getLogger(estateDelMenu.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            removeInfo.removeCattle(Integer.parseInt(TXcattleID.getText()));
+            labelS.setText("Record Deleted! Delete Another One or Exit");
         }
     }
 
 }
+
