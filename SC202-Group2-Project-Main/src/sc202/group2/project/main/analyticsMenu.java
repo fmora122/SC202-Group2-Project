@@ -5,6 +5,7 @@
 package sc202.group2.project.main;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,31 +23,24 @@ import javax.swing.JTextField;
  */
 public class analyticsMenu {
     private JFrame frame;
-    private JPanel panelN;
-    private JPanel panelW;
-    private JPanel panelE;
+    private JPanel main;
     private JPanel panelS;
-    private JPanel panelWMiddle;
-    private JPanel panelEMiddle;
-    private JPanel panelMiddle;
-    private JLabel labelN;
-    private JLabel labelS;
+    private JPanel panelW;
+    private JPanel panelW1;
+    private JPanel panelW2;
+    private JPanel panelE;
+    private JPanel panelE1;
+    private JPanel panelE2;
+    private JPanel panelC;
+    private JPanel panelC1;
+    private JPanel panelC2;
+    private JLabel labelW1; 
+    private JLabel labelW2;
+    private JLabel labelE1;
+    private JLabel labelE2;
+    private JLabel labelC1; 
+    private JLabel labelC2;
     private JButton buttonExit;
-    private JButton buttonView;
-    private JLabel status; 
-    private JLabel ingressDate;
-    private JLabel egressDate;
-    private JLabel restTime;
-    private JLabel viewStatus; 
-    private JLabel viewIngressDate;
-    private JLabel viewEgressDate;
-    private JLabel viewRestTime;
-    private JLabel paddockID;
-    private JTextField inputPaddockID;
-    private JLabel blank1;
-    private JLabel blank2;
-    private JLabel blank3;
-    private int numID = 0;
     
     public analyticsMenu(){
         analyticsMain();
@@ -56,108 +50,71 @@ public class analyticsMenu {
         frame = new JFrame();
         frame.setSize(440, 300);
         
-        panelN = new JPanel();
-        panelW = new JPanel();
-        panelE = new JPanel();
+        main = new JPanel();
         panelS = new JPanel();
-        panelWMiddle = new JPanel();
-        panelEMiddle = new JPanel();
-        panelMiddle = new JPanel();
+        panelW = new JPanel();
+        panelW1 = new JPanel();
+        panelW2 = new JPanel();
+        panelE = new JPanel();
+        panelE1 = new JPanel();
+        panelE2 = new JPanel();
+        panelC = new JPanel();
+        panelC1 = new JPanel();
+        panelC2 = new JPanel();       
+        labelW1 = new JLabel("1");
+        labelW2 = new JLabel("2");
+        labelE1 = new JLabel("3");
+        labelE2 = new JLabel("4");
+        labelC1 = new JLabel("5");
+        labelC2 = new JLabel("6");
         
-        buttonExit = new JButton("Exit");
-        buttonExit.addActionListener( new exitActionListener());
-        buttonView = new JButton("View");
-        buttonView.addActionListener( new viewActionListener());
-        
-        blank1 = new JLabel(" ");
-        blank2 = new JLabel(" ");
-        blank3 = new JLabel(" ");
-        labelN = new JLabel("Paddock Analytics Menu");
-        labelS = new JLabel("");
-        paddockID = new JLabel("Enter the Paddock ID");
-        paddockID.setPreferredSize(new Dimension(165,19));
-        status = new JLabel("Status"); 
-        status.setPreferredSize(new Dimension(135,19));
-        ingressDate = new JLabel("Ingress Date");
-        ingressDate.setPreferredSize(new Dimension(135,19));
-        egressDate = new JLabel("Egress Date");
-        egressDate.setPreferredSize(new Dimension(135,19));
-        restTime = new JLabel("Rest Time");
-        restTime.setPreferredSize(new Dimension(135,19));
-        
-        viewStatus = new JLabel(""); 
-        viewStatus.setPreferredSize(new Dimension(135,19));
-        viewIngressDate = new JLabel("");
-        viewIngressDate.setPreferredSize(new Dimension(135,19));
-        viewEgressDate = new JLabel("");
-        viewEgressDate.setPreferredSize(new Dimension(135,19));
-        viewRestTime = new JLabel("");
-        viewRestTime.setPreferredSize(new Dimension(135,19));
-        
-        inputPaddockID = new JTextField(20); 
-        inputPaddockID.addActionListener(new inputPaddockIDActionListener());
-        
-        panelN.add(labelN);
-        panelS.add(labelS);
-        panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
-        panelW.add(Box.createVerticalGlue());
-        panelW.add(paddockID);
-        panelW.add(blank1);
-        panelW.add(status);
-        panelW.add(ingressDate);
-        panelW.add(egressDate);
-        panelW.add(restTime);
-        panelW.add(blank2);
-        panelW.add(buttonView);
-        panelW.add(buttonExit);
-        panelW.add(Box.createVerticalGlue());
-        
-        panelWMiddle.add(Box.createHorizontalGlue());
-        panelWMiddle.add(panelW);
-        panelWMiddle.add(Box.createHorizontalGlue());
+        panelW1.add(labelW1);
+        panelW2.add(labelW2);
+        panelE1.add(labelE1);
+        panelE2.add(labelE2);
+        panelC1.add(labelC1);
+        panelC2.add(labelC2);
         
         panelE.setLayout(new BoxLayout(panelE, BoxLayout.Y_AXIS));
-        panelE.add(Box.createVerticalGlue());
-        panelE.add(inputPaddockID);
-        panelE.add(blank3);
-        panelE.add(viewStatus);
-        panelE.add(viewIngressDate);
-        panelE.add(viewEgressDate);
-        panelE.add(viewRestTime);
-        panelE.add(Box.createVerticalGlue());
+        panelE.add(panelE1);
+        panelE.add(panelE2);
+        panelW.setLayout(new BoxLayout(panelW, BoxLayout.Y_AXIS));
+        panelW.add(panelW1);
+        panelW.add(panelW2);
+        panelC.setLayout(new BoxLayout(panelC, BoxLayout.Y_AXIS));
+        panelC.add(panelC1);
+        panelC.add(panelC2);
+        main.add(panelW);
+        main.add(panelC);
+        main.add(panelE);
         
-        
-        panelEMiddle.add(Box.createHorizontalGlue());
-        panelEMiddle.add(panelE);
-        panelEMiddle.add(Box.createHorizontalGlue());
-        
-              
+        buttonExit = new JButton("Exit");
+        buttonExit.setMaximumSize(new Dimension(215, 25));
+        buttonExit.addActionListener( new exitActionListener());
+        panelS.add(buttonExit);
+                      
         frame.setTitle("Fincas Anónimas S.A");
-        frame.getContentPane() .add(BorderLayout.NORTH, panelN);
-        frame.getContentPane() .add(BorderLayout.WEST, panelWMiddle);
-        frame.getContentPane() .add(BorderLayout.EAST, panelEMiddle);
+        frame.add(main);
+        //frame.getContentPane() .add(BorderLayout.CENTER, main);
+        //frame.getContentPane() .add(BorderLayout.WEST, panelW);
+        //frame.getContentPane() .add(BorderLayout.EAST, panelE);
         frame.getContentPane() .add(BorderLayout.SOUTH, panelS);
+        
+        
         frame.setVisible(true);
- 
+        
+        String status = "";
+        panelW1.setBackground(Color.RED);
+        panelW2.setBackground(Color.GREEN);
+        panelE1.setBackground(Color.ORANGE);
+        panelE2.setBackground(Color.RED);
+        panelC1.setBackground(Color.GREEN);
+        panelC2.setBackground(Color.ORANGE);
     }
-    class inputPaddockIDActionListener implements ActionListener{
-        public void actionPerformed(ActionEvent e) {
-            numID = Integer.parseInt(inputPaddockID.getText());
-      }
-   }
-    class viewActionListener implements ActionListener{
-        public void actionPerformed(ActionEvent e) {
-            labelS.setText("Paddock "+numID+". View a New Record or Exit");
-            
-            viewStatus.setText("NA");
-            viewIngressDate.setText("NA");
-            viewEgressDate.setText("NA");
-            viewRestTime.setText("NA");          
-      }
-   }    
     class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
       }
    }
+    
 }
