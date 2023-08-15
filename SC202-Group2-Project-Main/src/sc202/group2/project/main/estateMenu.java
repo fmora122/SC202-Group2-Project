@@ -31,6 +31,7 @@ public class estateMenu {
     private JLabel labelN;
     private JButton buttonAdd;
     private JButton buttonDelete;
+    private JButton buttonConsult;
     private JButton buttonExit;
 
     public estateMenu(){
@@ -52,6 +53,9 @@ public class estateMenu {
         buttonDelete = new JButton("Delete Estate");
         buttonDelete.setMaximumSize(new Dimension(215, 25));
         buttonDelete.addActionListener( new delActionListener());
+        buttonConsult = new JButton("Consult Estate");
+        buttonConsult.setMaximumSize(new Dimension(215, 25));
+        buttonConsult.addActionListener( new consultActionListener());
         buttonExit = new JButton("Exit");
         buttonExit.setMaximumSize(new Dimension(215, 25));
         buttonExit.addActionListener( new exitActionListener());
@@ -61,6 +65,7 @@ public class estateMenu {
         panelC.add(Box.createVerticalGlue());
         panelC.add(buttonAdd);
         panelC.add(buttonDelete);
+        panelC.add(buttonConsult);
         panelC.add(buttonExit);
         panelC.add(Box.createVerticalGlue());
         
@@ -83,7 +88,12 @@ public class estateMenu {
         public void actionPerformed(ActionEvent e) {
             new estateDelMenu();
       }
-   }    
+   } 
+    class consultActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            new estateConsultMenu();
+      }
+   }
     class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();

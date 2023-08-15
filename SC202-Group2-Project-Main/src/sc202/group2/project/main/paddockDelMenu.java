@@ -8,9 +8,6 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -24,7 +21,10 @@ import javax.swing.JTextField;
  * @author fmora
  */
 public class paddockDelMenu {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2338fd96b641f0ced9b8e4f808240e9a6ff64a4b
     private JFrame frame;
     private JPanel panelN;
     private JPanel panelW;
@@ -41,11 +41,18 @@ public class paddockDelMenu {
     private JLabel blank1;
     private JTextField TXcpaddockID;
     private int numID = 0;
+<<<<<<< HEAD
 
     public paddockDelMenu() {
         paddockDelMain();
     }
 
+=======
+    
+    public paddockDelMenu(){
+        paddockDelMain();
+    }
+>>>>>>> 2338fd96b641f0ced9b8e4f808240e9a6ff64a4b
     public void paddockDelMain() {
 
         frame = new JFrame();
@@ -59,17 +66,27 @@ public class paddockDelMenu {
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
         buttonExit = new JButton("Exit");
-        buttonExit.addActionListener(new exitActionListener());
+        buttonExit.addActionListener( new exitActionListener());
         buttonDel = new JButton("Delete");
+<<<<<<< HEAD
         buttonDel.addActionListener(new delActionListener());
 
+=======
+        buttonDel.addActionListener( new delActionListener());
+        
+>>>>>>> 2338fd96b641f0ced9b8e4f808240e9a6ff64a4b
         labelN = new JLabel("Delete Paddock Menu");
         labelS = new JLabel("");
-        LBpaddockID = new JLabel("Enter the Paddock ID");
-        LBpaddockID.setPreferredSize(new Dimension(149, 19));
+        LBpaddockID = new JLabel("Enter the Paddock ID"); 
+        LBpaddockID.setPreferredSize(new Dimension(149,19));
         blank1 = new JLabel(" ");
+<<<<<<< HEAD
 
         TXcpaddockID = new JTextField(20);
+=======
+        
+        TXcpaddockID = new JTextField(20); 
+>>>>>>> 2338fd96b641f0ced9b8e4f808240e9a6ff64a4b
         TXcpaddockID.addActionListener(new TXcpaddockIDActionListener());
 
         panelN.add(labelN);
@@ -94,13 +111,18 @@ public class paddockDelMenu {
         panelEMiddle.add(Box.createHorizontalGlue());
         panelEMiddle.add(panelE);
         panelEMiddle.add(Box.createHorizontalGlue());
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 2338fd96b641f0ced9b8e4f808240e9a6ff64a4b
         frame.setTitle("Fincas Anónimas S.A");
-        frame.getContentPane().add(BorderLayout.NORTH, panelN);
-        frame.getContentPane().add(BorderLayout.WEST, panelWMiddle);
-        frame.getContentPane().add(BorderLayout.EAST, panelEMiddle);
-        frame.getContentPane().add(BorderLayout.SOUTH, panelS);
+        frame.getContentPane() .add(BorderLayout.NORTH, panelN);
+        frame.getContentPane() .add(BorderLayout.WEST, panelWMiddle);
+        frame.getContentPane() .add(BorderLayout.EAST, panelEMiddle);
+        frame.getContentPane() .add(BorderLayout.SOUTH, panelS);
         frame.setVisible(true);
+<<<<<<< HEAD
 
     }
 
@@ -127,4 +149,24 @@ public class paddockDelMenu {
 
         }
     }
+=======
+ 
+    }
+    class TXcpaddockIDActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            String inputText = TXcpaddockID.getText();
+            numID = Integer.parseInt(inputText);
+      }
+   }    
+    class exitActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            frame.dispose();
+      }
+   }
+    class delActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            labelS.setText("Record Deleted! Delete Another One or Exit");
+      }
+   }
+>>>>>>> 2338fd96b641f0ced9b8e4f808240e9a6ff64a4b
 }

@@ -124,9 +124,16 @@ public class saveInfo {
             JOptionPane.showMessageDialog(null,"Cattle information saved successfully.");
 
         } catch (IOException e) {
+<<<<<<< HEAD
 
             JOptionPane.showMessageDialog(null,"Error while saving cattle information: " + e.getMessage());
 
+=======
+            System.err.println("Error while saving cattle information: " + e.getMessage());
+            //labelS.setText("Record Saved! Add a New One or Exit");
+
+            JOptionPane.showMessageDialog(null,"Error while saving cattle information: " + e.getMessage());
+>>>>>>> 2338fd96b641f0ced9b8e4f808240e9a6ff64a4b
         }
     }
 

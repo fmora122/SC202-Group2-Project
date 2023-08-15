@@ -29,6 +29,7 @@ public class paddockMenu {
     private JLabel labelN;
     private JButton buttonAdd;
     private JButton buttonDelete;
+    private JButton buttonConsult;
     private JButton buttonStatus;
     private JButton buttonExit;
 
@@ -54,6 +55,9 @@ public class paddockMenu {
         buttonStatus = new JButton("Update Paddock Status");
         buttonStatus.setMaximumSize(new Dimension(215, 25));
         buttonStatus.addActionListener( new statusActionListener());
+        buttonConsult = new JButton("Consult Paddock");
+        buttonConsult.setMaximumSize(new Dimension(215, 25));
+        buttonConsult.addActionListener( new consultActionListener());
         buttonExit = new JButton("Exit");
         buttonExit.setMaximumSize(new Dimension(215, 25));
         buttonExit.addActionListener( new exitActionListener());
@@ -64,6 +68,7 @@ public class paddockMenu {
         panelC.add(buttonAdd);
         panelC.add(buttonDelete);
         panelC.add(buttonStatus);
+        panelC.add(buttonConsult);
         panelC.add(buttonExit);
         panelC.add(Box.createVerticalGlue());
         
@@ -91,7 +96,12 @@ public class paddockMenu {
         public void actionPerformed(ActionEvent e) {
             new paddockStatusMenu();
       }
-   }     
+   }  
+    class consultActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            new paddockConsultMenu();
+      }
+   }
     class exitActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
