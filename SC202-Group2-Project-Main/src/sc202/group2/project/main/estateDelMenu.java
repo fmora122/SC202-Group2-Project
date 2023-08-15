@@ -111,17 +111,15 @@ public class estateDelMenu {
    }
     class delActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
+
 
                 labelS.setText("Record Deleted! Delete Another One or Exit");
 
         }
     }
 
-=======
-            labelS.setText("Record Deleted! Delete Another One or Exit");
-      }
-   }
+            
     
->>>>>>> 2338fd96b641f0ced9b8e4f808240e9a6ff64a4b
+    
+
 }
