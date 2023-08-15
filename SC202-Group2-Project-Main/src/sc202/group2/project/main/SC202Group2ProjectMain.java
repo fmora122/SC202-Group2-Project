@@ -11,7 +11,7 @@ public class SC202Group2ProjectMain {
     public static void main(String[] args) {
         ranchoMenu menu = new ranchoMenu();
 
-    } 
+    }
     
 }
 

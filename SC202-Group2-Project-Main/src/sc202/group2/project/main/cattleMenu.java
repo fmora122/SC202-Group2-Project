@@ -30,6 +30,7 @@ public class cattleMenu {
     private JLabel labelN;
     private JButton buttonAdd;
     private JButton buttonDelete;
+    private JButton buttonConsult;
     private JButton buttonExit;
 
     
@@ -52,6 +53,9 @@ public class cattleMenu {
         buttonDelete = new JButton("Delete Cattle");
         buttonDelete.setMaximumSize(new Dimension(215, 25));
         buttonDelete.addActionListener( new delActionListener());
+        buttonConsult = new JButton("Consult Cattle");
+        buttonConsult.setMaximumSize(new Dimension(215, 25));
+        buttonConsult.addActionListener( new consultActionListener());
         buttonExit = new JButton("Exit");
         buttonExit.setMaximumSize(new Dimension(215, 25));
         buttonExit.addActionListener( new exitActionListener());
@@ -61,6 +65,7 @@ public class cattleMenu {
         panelC.add(Box.createVerticalGlue());
         panelC.add(buttonAdd);
         panelC.add(buttonDelete);
+        panelC.add(buttonConsult);
         panelC.add(buttonExit);
         panelC.add(Box.createVerticalGlue());
         
@@ -82,6 +87,11 @@ public class cattleMenu {
     class delActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             new cattleDelMenu();
+      }
+   }
+    class consultActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            new cattleConsultMenu();
       }
    }
     class exitActionListener implements ActionListener{
