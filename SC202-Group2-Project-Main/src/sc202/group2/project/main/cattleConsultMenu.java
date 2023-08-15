@@ -58,7 +58,7 @@ public class cattleConsultMenu {
     public void cattleConsultMenu() {
         
         frame = new JFrame();
-        frame.setSize(440, 300);
+        frame.setSize(440, 350);
         
         panelN = new JPanel();
         panelW = new JPanel();
