@@ -181,8 +181,7 @@ public class cattleAddMenu {
    }
 
     class saveActionListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            labelS.setText("Record Saved! Add a New One or Exit");
+        public void actionPerformed(ActionEvent e) {           
 //<<<<<<< HEAD
             // Obtener toda la información ingresada en los campos de texto
             int cattleId = Integer.parseInt(TXcattleID.getText());
@@ -196,7 +195,6 @@ public class cattleAddMenu {
             saveInfo.saveCattle(cattleId, cattleName, cattleBirthdate, cattleLastWeight, cattleSex, cattleBreed);
             
             // Llamar al método saveCattle de la clase saveInfo, pasando el nuevo objeto Cattle
-            labelS.setText("Cattle Record Saved! Add a New One or Exit");
         }
     }
 //=======

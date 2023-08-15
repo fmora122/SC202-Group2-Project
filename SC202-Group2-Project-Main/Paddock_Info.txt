@@ -1,0 +1,27 @@
+Paddock ID: 2560
+Paddock Name: Puerto
+Paddock Status: Libre
+Cattle Ingress Date: 10/5/2023
+Cattle Egress Date: 21/5/2023
+Cattle Ammount: 8
+Water (L): 8
+Terrain Type: field
+================================
+Paddock ID: 12011
+Paddock Name: pana
+Paddock Status: busy
+Cattle Ingress Date: 12
+Cattle Egress Date: 17
+Cattle Ammount: 1
+Water (L): 1
+Terrain Type: Cesped
+================================
+Paddock ID: 90112
+Paddock Name: hvadw
+Paddock Status: busy
+Cattle Ingress Date: 13
+Cattle Egress Date: 18
+Cattle Ammount: 1
+Water (L): 1
+Terrain Type: njdkaww
+================================
