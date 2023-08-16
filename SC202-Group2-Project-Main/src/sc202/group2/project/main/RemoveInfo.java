@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 public class RemoveInfo {
     
     
-public void removeCattle(int cattleID) {
+public void removeCattle(int cattleID) { 
     removeEntry("Cattle ID: " + cattleID);
 }
 

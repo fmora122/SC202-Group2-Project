@@ -58,12 +58,7 @@ public class paddockDelMenu {
         buttonExit = new JButton("Exit");
         buttonExit.addActionListener( new exitActionListener());
         buttonDel = new JButton("Delete");
-
-        buttonDel.addActionListener(new delActionListener());
-
-
-        buttonDel.addActionListener( new delActionListener());
-        
+        buttonDel.addActionListener(new delActionListener());        
 
         labelN = new JLabel("Delete Paddock Menu");
         labelS = new JLabel("");
@@ -73,10 +68,6 @@ public class paddockDelMenu {
 
 
         TXcpaddockID = new JTextField(20);
-
-        
-        TXcpaddockID = new JTextField(20); 
-
         TXcpaddockID.addActionListener(new TXcpaddockIDActionListener());
 
         panelN.add(labelN);
@@ -102,9 +93,6 @@ public class paddockDelMenu {
         panelEMiddle.add(panelE);
         panelEMiddle.add(Box.createHorizontalGlue());
 
-
-
-  
 
         frame.setTitle("Fincas Anónimas S.A");
         frame.getContentPane() .add(BorderLayout.NORTH, panelN);
@@ -134,7 +122,9 @@ public class paddockDelMenu {
     class delActionListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-
+            int paddockIDToDelete = numID; 
+            RemoveInfo remover = new RemoveInfo();
+            remover.removePaddock(paddockIDToDelete); // Llamar al método 
             labelS.setText("Record Deleted! Delete Another One or Exit");
 
         }

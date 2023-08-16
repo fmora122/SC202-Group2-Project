@@ -118,8 +118,8 @@ public class cattleDelMenu {
             labelS.setText("Record Deleted! Delete Another One or Exit");
         }
     }
-            
-      }
+
+}
    
     
 

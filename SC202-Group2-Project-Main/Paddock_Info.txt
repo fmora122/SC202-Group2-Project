@@ -25,12 +25,3 @@ Cattle Ammount: 1
 Water (L): 1
 Terrain Type: njdkaww
 ================================
-Paddock ID: 1
-Paddock Name: 1
-Paddock Status: 1
-Cattle Ingress Date: 1
-Cattle Egress Date: 1
-Cattle Ammount: 1
-Water (L): 1
-Terrain Type: 1
-================================

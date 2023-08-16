@@ -36,7 +36,7 @@ public class estateDelMenu {
     private JLabel LBestateID;
     private JLabel blank1;
     private JTextField TXestateID;
-    private int numID = 0;
+    private String inputText;
     
     public estateDelMenu(){
         estateDelMain();
@@ -100,8 +100,8 @@ public class estateDelMenu {
     }
     class TXestateIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateID.getText();
-            numID = Integer.parseInt(inputText);
+            inputText = TXestateID.getText();
+            //numID = Integer.parseInt(inputText);
       }
    }    
     class exitActionListener implements ActionListener{
