@@ -120,7 +120,7 @@ private void removeEntryPaddock(String targetLine) {
             if (found) {
                 JOptionPane.showMessageDialog(null, "Paddock information removed successfully.");
             } else {
-                JOptionPane.showMessageDialog(null, "Paddock ID not found.");
+                JOptionPane.showMessageDialog(null, "Paddock ID not found."); //Pequeño error de impresion preguntar a chris
             }
         } else {
             JOptionPane.showMessageDialog(null, "Error while removing Paddock information.");
@@ -130,8 +130,8 @@ private void removeEntryPaddock(String targetLine) {
     }
 }
 
-public void removeEstate(int estateManagerId){
-    removeEntryEstate("Estate Address: " + estateManagerId);
+public void removeEstate(String inputText){
+    removeEntryEstate("Estate Name: " + inputText);
 }
 private void removeEntryEstate(String targetLine) {
     try {

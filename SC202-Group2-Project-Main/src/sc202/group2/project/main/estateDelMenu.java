@@ -36,7 +36,7 @@ public class estateDelMenu {
     private JLabel LBestateID;
     private JLabel blank1;
     private JTextField TXestateID;
-    private int numID = 0;
+    private String inputText = "";
     
     public estateDelMenu(){
         estateDelMain();
@@ -101,7 +101,7 @@ public class estateDelMenu {
     class TXestateIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String inputText = TXestateID.getText();
-            numID = Integer.parseInt(inputText);
+            //numID = Integer.parseInt(inputText);
       }
    }    
     class exitActionListener implements ActionListener{
@@ -111,11 +111,12 @@ public class estateDelMenu {
    }
     class delActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-
-
-                labelS.setText("Record Deleted! Delete Another One or Exit");
+            RemoveInfo remover = new RemoveInfo();
+            remover.removeEstate(inputText); // Llamar al método removeCattle
+            labelS.setText("Record Deleted! Delete Another One or Exit");;
 
         }
+
     }
 
             

@@ -134,7 +134,9 @@ public class paddockDelMenu {
     class delActionListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-
+            int paddockIDToDelete = numID; // Obtener el ID de ganado a eliminar
+            RemoveInfo remover = new RemoveInfo();
+            remover.removePaddock(paddockIDToDelete); // Llamar al método removeCattle
             labelS.setText("Record Deleted! Delete Another One or Exit");
 
         }
