@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 public class RemoveInfo {
     
     
-public void removeCattle(int cattleID) {
+public void removeCattle(int cattleID) { 
     removeEntry("Cattle ID: " + cattleID);
 }
 
@@ -130,8 +130,8 @@ private void removeEntryPaddock(String targetLine) {
     }
 }
 
-public void removeEstate(String inputText){
-    removeEntryEstate("Estate Name: " + inputText);
+public void removeEstate(String estateName){
+    removeEntryEstate("Estate Name: " + estateName);
 }
 private void removeEntryEstate(String targetLine) {
     try {

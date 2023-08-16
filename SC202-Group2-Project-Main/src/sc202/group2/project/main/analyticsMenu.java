@@ -48,7 +48,7 @@ public class analyticsMenu {
     public void analyticsMain() {
         
         frame = new JFrame();
-        frame.setSize(440, 300);
+        frame.setSize(640, 300);
         
         main = new JPanel();
         panelS = new JPanel();
@@ -62,11 +62,17 @@ public class analyticsMenu {
         panelC1 = new JPanel();
         panelC2 = new JPanel();       
         labelW1 = new JLabel("1");
+        labelW1.setPreferredSize(new Dimension(135,100));
         labelW2 = new JLabel("2");
+        labelW2.setPreferredSize(new Dimension(135,100));
         labelE1 = new JLabel("3");
+        labelE1.setPreferredSize(new Dimension(135,100));
         labelE2 = new JLabel("4");
+        labelE2.setPreferredSize(new Dimension(135,100));
         labelC1 = new JLabel("5");
+        labelC1.setPreferredSize(new Dimension(135,100));
         labelC2 = new JLabel("6");
+        labelC2.setPreferredSize(new Dimension(135,100));
         
         panelW1.add(labelW1);
         panelW2.add(labelW2);

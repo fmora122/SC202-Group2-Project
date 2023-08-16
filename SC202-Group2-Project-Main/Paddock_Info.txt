@@ -16,3 +16,15 @@ Cattle Ammount: 1
 Water (L): 1
 Terrain Type: Cesped
 ================================
+<<<<<<< HEAD
+=======
+Paddock ID: 90112
+Paddock Name: hvadw
+Paddock Status: busy
+Cattle Ingress Date: 13
+Cattle Egress Date: 18
+Cattle Ammount: 1
+Water (L): 1
+Terrain Type: njdkaww
+================================
+>>>>>>> d840e6bc3cb00cbf6d1c4c568039eb5a89273880
