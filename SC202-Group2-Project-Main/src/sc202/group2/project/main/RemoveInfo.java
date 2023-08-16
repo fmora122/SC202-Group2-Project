@@ -130,6 +130,58 @@ private void removeEntryPaddock(String targetLine) {
     }
 }
 
-public void removeEstate(int cattleID){}
+public void removeEstate(int estateManagerId){
+    removeEntryEstate("Estate Address: " + estateManagerId);
+}
+private void removeEntryEstate(String targetLine) {
+    try {
+        String rootDir = System.getProperty("user.dir");
+        String fileName = "Estate_Info.txt";
+        String filePath = rootDir + "/" + fileName;
+
+        File tempFile = new File("temp.txt");
+
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        PrintWriter writer = new PrintWriter(new FileWriter(tempFile));
+
+            String line;
+            boolean found = false;
+            boolean skipLines = false;
+
+            while ((line = reader.readLine()) != null) {
+                if (skipLines) {
+                    if (line.equals("================================")) {
+                        skipLines = false;
+                    }
+                    continue;
+                }
+
+                if (line.equals(targetLine)) {
+                    found = true;
+                    skipLines = true;
+                    continue;
+                }
+
+                writer.println(line);
+            }
+
+            writer.close();
+            reader.close();
+
+        File originalFile = new File(filePath);
+        if (originalFile.delete()) {
+            tempFile.renameTo(originalFile);
+            if (found) {
+                JOptionPane.showMessageDialog(null, "Estate information removed successfully.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Estate ID not found.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Error while removing Estate information.");
+        }
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error while removing Estate information: " + e.getMessage());
+    }
+}
     
 }
