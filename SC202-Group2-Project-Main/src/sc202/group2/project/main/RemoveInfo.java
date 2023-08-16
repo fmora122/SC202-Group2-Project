@@ -138,7 +138,6 @@ private void removeEntryEstate(String targetLine) {
         String rootDir = System.getProperty("user.dir");
         String fileName = "Estate_Info.txt";
         String filePath = rootDir + "/" + fileName;
-        System.out.println(targetLine);
         File tempFile = new File("temp.txt");
 
         BufferedReader reader = new BufferedReader(new FileReader(filePath));

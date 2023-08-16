@@ -113,7 +113,6 @@ public class estateDelMenu {
     class delActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String estateIDToDelete = inputText;
-            System.out.println(inputText);
             RemoveInfo remover = new RemoveInfo();
             remover.removeEstate(estateIDToDelete); // Llamar al método removeCattle
             labelS.setText("Record Deleted! Delete Another One or Exit");
