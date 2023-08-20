@@ -10,18 +10,18 @@ package sc202.group2.project.main;
  */
 public class Paddocks {
     private int paddocksId =0;
-    private String paddocksName = "";
     private String paddocksStatus = "";
+    private String paddocksName = "";
     private int cattleEntryDate =0;
     private int cattleExitDate =0;
     private int ammountCattle =0;
     private String waterCattle = "";
     private String terrainType ="";
 
-    public Paddocks(int paddocksId, String paddocksName, String paddocksStatus, int cattleEntryDate, int cattleExitDate, int ammountCattle, String waterCattle, String terrainType) {
+    public Paddocks(int paddocksId,String paddocksStatus ,String paddocksName, int cattleEntryDate, int cattleExitDate, int ammountCattle, String waterCattle, String terrainType) {
         this.paddocksId = paddocksId;
-        this.paddocksName = paddocksName;
         this.paddocksStatus = paddocksStatus;
+        this.paddocksName = paddocksName;
         this.cattleEntryDate = cattleEntryDate;
         this.cattleExitDate = cattleExitDate;
         this.ammountCattle = ammountCattle;

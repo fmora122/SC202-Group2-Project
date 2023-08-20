@@ -16,8 +16,6 @@ Cattle Ammount: 1
 Water (L): 1
 Terrain Type: Cesped
 ================================
-<<<<<<< HEAD
-=======
 Paddock ID: 90112
 Paddock Name: hvadw
 Paddock Status: busy
@@ -27,4 +25,21 @@ Cattle Ammount: 1
 Water (L): 1
 Terrain Type: njdkaww
 ================================
->>>>>>> d840e6bc3cb00cbf6d1c4c568039eb5a89273880
+Paddock ID: 100
+Paddock Status: busy
+Paddock Name: aaaa
+Cattle Ingress Date: 12
+Cattle Egress Date: 17
+Cattle Ammount: 1
+Water (L): 1
+Terrain Type: plano
+================================
+Paddock ID: 200
+Paddock Status: busy
+Paddock Name: El rancho
+Cattle Ingress Date: 20
+Cattle Egress Date: 25
+Cattle Ammount: 100
+Water (L): 100
+Terrain Type: cesped
+================================

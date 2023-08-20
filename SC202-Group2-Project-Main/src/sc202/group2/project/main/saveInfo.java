@@ -31,8 +31,8 @@ public class saveInfo {
                 // Escribir la información en el archivo
                 // , String , String , String , String , String , String 
                 printWriter.println("Paddock ID: " + paddocksId);
-                printWriter.println("Paddock Name: " + paddocksName);
                 printWriter.println("Paddock Status: " + paddocksStatus);
+                printWriter.println("Paddock Name: " + paddocksName);
                 printWriter.println("Cattle Ingress Date: " + cattleEntryDate);
                 printWriter.println("Cattle Egress Date: " + cattleExitDate);
                 printWriter.println("Cattle Ammount: " + ammountCattle);

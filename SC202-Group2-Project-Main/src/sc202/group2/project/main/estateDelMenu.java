@@ -61,7 +61,7 @@ public class estateDelMenu {
         
         labelN = new JLabel("Delete Estate Menu");
         labelS = new JLabel("");
-        LBestateID = new JLabel("Enter the Estate ID"); 
+        LBestateID = new JLabel("Enter the Estate Name"); 
         LBestateID.setPreferredSize(new Dimension(135,19));
         blank1 = new JLabel(" ");
         
