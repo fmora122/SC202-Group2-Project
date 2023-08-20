@@ -53,7 +53,7 @@ Water (L): 10
 Terrain Type: Field
 ================================
 Paddock ID: 10753
-Paddock Name: El aguacate
+Paddock Status: Available
 Paddock Status: In Rest
 Cattle Ingress Date: 12/8/2023
 Cattle Egress Date: 22/8/2023
