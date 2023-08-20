@@ -172,14 +172,15 @@ public class paddockConsultMenu {
     class viewActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             labelS.setText("Paddock "+numID+". View a New Record or Exit");
-            
-            viewpaddocksName.setText("NA");
-            viewpaddocksStatus.setText("NA");
-            viewcattleEntryDate.setText("NA");
-            viewcattleExitDate.setText("NA");  
-            viewammountCattle.setText("NA");
-            viewwaterCattle.setText("NA");
-            viewterrainType.setText("NA");
+            //PaddockStatusChanger changer = new PaddockStatusChanger();
+            //changer.changePaddockStatus(numID, paddocksStatus);
+            //viewpaddocksName.setText("NA");
+            //viewpaddocksStatus.setText("NA");
+            //viewcattleEntryDate.setText("NA");
+            //viewcattleExitDate.setText("NA");  
+            //viewammountCattle.setText("NA");
+            //viewwaterCattle.setText("NA");
+            //viewterrainType.setText("NA");
       }
    }
     class exitActionListener implements ActionListener{

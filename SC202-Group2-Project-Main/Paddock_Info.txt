@@ -1,21 +1,22 @@
-Paddock ID: 2560
-Paddock Name: Puerto
-Paddock Status: Libre
-Cattle Ingress Date: 10/5/2023
-Cattle Egress Date: 21/5/2023
-Cattle Ammount: 8
-Water (L): 8
-Terrain Type: field
+Paddock ID: 10741
+Paddock Name: El paraiso
+Paddock Status: Available
+Cattle Ingress Date: 16/8/2023
+Cattle Egress Date: 26/8/2023
+Cattle Ammount: 10
+Water (L): 10
+Terrain Type: Mountain
 ================================
-Paddock ID: 12011
-Paddock Name: pana
-Paddock Status: busy
-Cattle Ingress Date: 12
-Cattle Egress Date: 17
-Cattle Ammount: 1
-Water (L): 1
-Terrain Type: Cesped
+Paddock ID: 10852
+Paddock Name: El Hojal
+Paddock Status: Busy
+Cattle Ingress Date: 6/8/2023
+Cattle Egress Date: 16/8/2023
+Cattle Ammount: 10
+Water (L): 10
+Terrain Type: Field
 ================================
+<<<<<<< HEAD
 Paddock ID: 90112
 Paddock Name: hvadw
 Paddock Status: busy
@@ -43,3 +44,50 @@ Cattle Ammount: 100
 Water (L): 100
 Terrain Type: cesped
 ================================
+=======
+Paddock ID: 10963
+Paddock Name: El Mariposario
+Paddock Status: In Rest
+Cattle Ingress Date: 18/8/2023
+Cattle Egress Date: 8/8/2023
+Cattle Ammount: 10
+Water (L): 10
+Terrain Type: Field
+================================
+Paddock ID: 10147
+Paddock Name: El Korn
+Paddock Status: Available
+Cattle Ingress Date: 16/8/2023
+Cattle Egress Date: 26/8/2023
+Cattle Ammount: 10
+Water (L): 10
+Terrain Type: Field
+================================
+Paddock ID: 10258
+Paddock Name: JoJaMart
+Paddock Status: Busy
+Cattle Ingress Date: 14/8/2023
+Cattle Egress Date: 24/8/2023
+Cattle Ammount: 10
+Water (L): 10
+Terrain Type: Field
+================================
+Paddock ID: 10369
+Paddock Name: El aguacate
+Paddock Status: In Rest
+Cattle Ingress Date: 12/8/2023
+Cattle Egress Date: 22/8/2023
+Cattle Ammount: 10
+Water (L): 10
+Terrain Type: Field
+================================
+Paddock ID: 10753
+Paddock Status: Available
+Paddock Status: In Rest
+Cattle Ingress Date: 12/8/2023
+Cattle Egress Date: 22/8/2023
+Cattle Ammount: 10
+Water (L): 10
+Terrain Type: Field
+================================
+>>>>>>> aef13c1e0e02dc6c6cccecac941bf22d3f723519

@@ -101,7 +101,7 @@ public class estateDelMenu {
     }
     class TXestateIDActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String inputText = TXestateID.getText();
+            inputText = TXestateID.getText();
             //numID = Integer.parseInt(inputText);
       }
    }    
@@ -112,17 +112,13 @@ public class estateDelMenu {
    }
     class delActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String paddockIDToDelete = inputText; 
+            String estateIDToDelete = inputText;
             RemoveInfo remover = new RemoveInfo();
-            remover.removeEstate(paddockIDToDelete); // Llamar al método removeCattle
-            labelS.setText("Record Deleted! Delete Another One or Exit");;
+            remover.removeEstate(estateIDToDelete); // Llamar al método removeCattle
+            labelS.setText("Record Deleted! Delete Another One or Exit");
 
         }
 
     }
-
-            
-    
-    
 
 }

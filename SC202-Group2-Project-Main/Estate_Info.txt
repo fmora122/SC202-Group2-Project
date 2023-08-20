@@ -1,27 +1,27 @@
-Estate Name: huertas
-Estate Address: heredia
-Estate Address: chris
-Estate Address: 10250
-Estate Address: 87654321
-Estate Address: 6
-Estate Address: 100km
-Estate Address: 50
+Estate Name: Huertas
+Estate Location: Heredia
+Estate Manager name: Christopher
+Estate Manager ID: 10250
+Estate Manager phone#: 62196059
+Estate Paddocks number: 2
+Estate Size: 25 km2
+Estate Total Cattle: 20
 ================================
-Estate Name: 9
-Estate Address: 9
-Estate Address: 9
-Estate Address: 9
-Estate Address: 9
-Estate Address: 9
-Estate Address: 9
-Estate Address: 9
+Estate Name: Las Fresas
+Estate Location: San Carlos
+Estate Manager name: Fabricio
+Estate Manager ID: 10895
+Estate Manager phone#: 83277533
+Estate Paddocks number: 2
+Estate Size: 16 km2
+Estate Total Cattle: 20
 ================================
-Estate Name: el Rancho
-Estate Address: Alajuela
-Estate Address: Ramon
-Estate Address: 1541256161
-Estate Address: 677811621
-Estate Address: 12
-Estate Address: 67
-Estate Address: 4
+Estate Name: La Cartonera
+Estate Location: Guanacaste
+Estate Manager name: Alejhandro
+Estate Manager ID: 10753
+Estate Manager phone#: 61166561
+Estate Paddocks number: 2
+Estate Size: 32 km2
+Estate Total Cattle: 20
 ================================

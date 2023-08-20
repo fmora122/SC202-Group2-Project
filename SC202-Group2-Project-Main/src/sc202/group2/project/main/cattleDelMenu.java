@@ -111,7 +111,6 @@ public class cattleDelMenu {
    }
     class delActionListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-
             int cattleIDToDelete = numID; // Obtener el ID de ganado a eliminar
             RemoveInfo remover = new RemoveInfo();
             remover.removeCattle(cattleIDToDelete); // Llamar al método removeCattle
