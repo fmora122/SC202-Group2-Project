@@ -45,18 +45,18 @@ public class estateMenu {
         panelN = new JPanel();
         panelC = new JPanel();
         panelMiddle = new JPanel();
-        labelN = new JLabel("Estate Menu");
+        labelN = new JLabel("Menu de Fincas");
         
-        buttonAdd = new JButton("Add Estate");
+        buttonAdd = new JButton("Agregar Fincas");
         buttonAdd.setMaximumSize(new Dimension(215, 25));
         buttonAdd.addActionListener( new addActionListener());
-        buttonDelete = new JButton("Delete Estate");
+        buttonDelete = new JButton("Borrar Fincas");
         buttonDelete.setMaximumSize(new Dimension(215, 25));
         buttonDelete.addActionListener( new delActionListener());
-        buttonConsult = new JButton("Consult Estate");
+        buttonConsult = new JButton("Consultar Fincas");
         buttonConsult.setMaximumSize(new Dimension(215, 25));
         buttonConsult.addActionListener( new consultActionListener());
-        buttonExit = new JButton("Exit");
+        buttonExit = new JButton("Salir");
         buttonExit.setMaximumSize(new Dimension(215, 25));
         buttonExit.addActionListener( new exitActionListener());
         

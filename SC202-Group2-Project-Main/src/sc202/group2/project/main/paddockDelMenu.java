@@ -46,7 +46,7 @@ public class paddockDelMenu {
     public void paddockDelMain() {
 
         frame = new JFrame();
-        frame.setSize(420, 300);
+        frame.setSize(460, 300);
 
         panelN = new JPanel();
         panelW = new JPanel();
@@ -55,15 +55,15 @@ public class paddockDelMenu {
         panelWMiddle = new JPanel();
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
-        buttonExit = new JButton("Exit");
+        buttonExit = new JButton("Salir");
         buttonExit.addActionListener( new exitActionListener());
-        buttonDel = new JButton("Delete");
+        buttonDel = new JButton("Borrar");
         buttonDel.addActionListener(new delActionListener());        
 
-        labelN = new JLabel("Delete Paddock Menu");
+        labelN = new JLabel("Menu Borrar Potrero");
         labelS = new JLabel("");
-        LBpaddockID = new JLabel("Enter the Paddock ID"); 
-        LBpaddockID.setPreferredSize(new Dimension(149,19));
+        LBpaddockID = new JLabel("Ingresar ID del Potrero"); 
+        LBpaddockID.setPreferredSize(new Dimension(200,19));
         blank1 = new JLabel(" ");
 
 

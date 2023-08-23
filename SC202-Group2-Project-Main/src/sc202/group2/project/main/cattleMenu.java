@@ -45,18 +45,18 @@ public class cattleMenu {
         panelN = new JPanel();
         panelC = new JPanel();
         panelMiddle = new JPanel();
-        labelN = new JLabel("Cattle Menu");
+        labelN = new JLabel("Menu Ganado");
         
-        buttonAdd = new JButton("Add Cattle");
+        buttonAdd = new JButton("Agregar Ganado");
         buttonAdd.setMaximumSize(new Dimension(215, 25));
         buttonAdd.addActionListener( new addActionListener());
-        buttonDelete = new JButton("Delete Cattle");
+        buttonDelete = new JButton("Borrar Ganado");
         buttonDelete.setMaximumSize(new Dimension(215, 25));
         buttonDelete.addActionListener( new delActionListener());
-        buttonConsult = new JButton("Consult Cattle");
+        buttonConsult = new JButton("Consultar Ganado");
         buttonConsult.setMaximumSize(new Dimension(215, 25));
         buttonConsult.addActionListener( new consultActionListener());
-        buttonExit = new JButton("Exit");
+        buttonExit = new JButton("Salir");
         buttonExit.setMaximumSize(new Dimension(215, 25));
         buttonExit.addActionListener( new exitActionListener());
         

@@ -45,7 +45,7 @@ public class estateDelMenu {
     public void estateDelMain() {
         
         frame = new JFrame();
-        frame.setSize(400, 300);
+        frame.setSize(480, 300);
         
         panelN = new JPanel();
         panelW = new JPanel();
@@ -54,15 +54,15 @@ public class estateDelMenu {
         panelWMiddle = new JPanel();
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
-        buttonExit = new JButton("Exit");
+        buttonExit = new JButton("Salir");
         buttonExit.addActionListener( new exitActionListener());
-        buttonDel = new JButton("Delete");
+        buttonDel = new JButton("Borrar");
         buttonDel.addActionListener( new delActionListener());
         
-        labelN = new JLabel("Delete Estate Menu");
+        labelN = new JLabel("Menu Borrar Fincas");
         labelS = new JLabel("");
-        LBestateID = new JLabel("Enter the Estate Name"); 
-        LBestateID.setPreferredSize(new Dimension(135,19));
+        LBestateID = new JLabel("Ingrese el Nombre de la Finca"); 
+        LBestateID.setPreferredSize(new Dimension(220,19));
         blank1 = new JLabel(" ");
         
         TXestateID = new JTextField(20); 

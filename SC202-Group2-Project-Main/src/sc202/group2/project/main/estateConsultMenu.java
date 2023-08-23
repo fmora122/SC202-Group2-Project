@@ -61,7 +61,7 @@ public class estateConsultMenu {
     public void estateConsultMenu() {
         
         frame = new JFrame();
-        frame.setSize(440, 350);
+        frame.setSize(480, 350);
         
         panelN = new JPanel();
         panelW = new JPanel();
@@ -71,31 +71,31 @@ public class estateConsultMenu {
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
         
-        buttonExit = new JButton("Exit");
+        buttonExit = new JButton("Salir");
         buttonExit.addActionListener( new exitActionListener());
-        buttonView = new JButton("View");
+        buttonView = new JButton("Ver");
         buttonView.addActionListener( new viewActionListener());
         
         blank1 = new JLabel(" ");
         blank2 = new JLabel(" ");
         blank3 = new JLabel(" ");
-        labelN = new JLabel("Consult Estate Menu");
+        labelN = new JLabel("Menu Consultar Finca");
         labelS = new JLabel("");
-        estateName = new JLabel("Enter the Estate Name");
-        estateName.setPreferredSize(new Dimension(165,19));
-        estateLocation = new JLabel("Location"); 
+        estateName = new JLabel("Ingrese el Nombre de la Finca");
+        estateName.setPreferredSize(new Dimension(220,19));
+        estateLocation = new JLabel("Ubicacion"); 
         estateLocation.setPreferredSize(new Dimension(135,19));
-        estateManagerName = new JLabel("Manager Name");
+        estateManagerName = new JLabel("Nombre del Administrador");
         estateManagerName.setPreferredSize(new Dimension(135,19));
-        estateManagerId = new JLabel("Manager ID");
+        estateManagerId = new JLabel("ID del Administrador");
         estateManagerId.setPreferredSize(new Dimension(135,19));
-        estateManagerPhone = new JLabel("Manager Phone");
+        estateManagerPhone = new JLabel("Tel del Administrador");
         estateManagerPhone.setPreferredSize(new Dimension(135,19));
-        estateNumberPaddocks = new JLabel("Number Paddocks");
+        estateNumberPaddocks = new JLabel("Cant de Potreros");
         estateNumberPaddocks.setPreferredSize(new Dimension(135,19));
-        estateSize = new JLabel("Size");
+        estateSize = new JLabel("Tamano");
         estateSize.setPreferredSize(new Dimension(135,19));
-        estateTotalCattle = new JLabel("Total Cattle");
+        estateTotalCattle = new JLabel("Cant de Ganado");
         estateTotalCattle.setPreferredSize(new Dimension(135,19));
 
         viewestateLocation = new JLabel(""); 

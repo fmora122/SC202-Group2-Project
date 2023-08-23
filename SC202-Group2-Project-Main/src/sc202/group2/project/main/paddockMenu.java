@@ -44,22 +44,22 @@ public class paddockMenu {
         panelN = new JPanel();
         panelC = new JPanel();
         panelMiddle = new JPanel();
-        labelN = new JLabel("Paddock Menu");
+        labelN = new JLabel("Menu de Potreros");
         
-        buttonAdd = new JButton("Add Paddock");
-        buttonAdd.setMaximumSize(new Dimension(215, 25));
+        buttonAdd = new JButton("Agregar Potrero");
+        buttonAdd.setMaximumSize(new Dimension(235, 25));
         buttonAdd.addActionListener( new addActionListener());
-        buttonDelete = new JButton("Delete Paddock");
-        buttonDelete.setMaximumSize(new Dimension(215, 25));
+        buttonDelete = new JButton("Borrar Potrero");
+        buttonDelete.setMaximumSize(new Dimension(235, 25));
         buttonDelete.addActionListener( new delActionListener());
-        buttonStatus = new JButton("Update Paddock Status");
-        buttonStatus.setMaximumSize(new Dimension(215, 25));
+        buttonStatus = new JButton("Cambiar estado de Potrero");
+        buttonStatus.setMaximumSize(new Dimension(235, 25));
         buttonStatus.addActionListener( new statusActionListener());
-        buttonConsult = new JButton("Consult Paddock");
-        buttonConsult.setMaximumSize(new Dimension(215, 25));
+        buttonConsult = new JButton("Consultar Potrero");
+        buttonConsult.setMaximumSize(new Dimension(235, 25));
         buttonConsult.addActionListener( new consultActionListener());
-        buttonExit = new JButton("Exit");
-        buttonExit.setMaximumSize(new Dimension(215, 25));
+        buttonExit = new JButton("Salir");
+        buttonExit.setMaximumSize(new Dimension(235, 25));
         buttonExit.addActionListener( new exitActionListener());
         
         panelN.add(labelN);

@@ -58,7 +58,7 @@ public class cattleConsultMenu {
     public void cattleConsultMenu() {
         
         frame = new JFrame();
-        frame.setSize(440, 350);
+        frame.setSize(460, 350);
         
         panelN = new JPanel();
         panelW = new JPanel();
@@ -68,27 +68,27 @@ public class cattleConsultMenu {
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
         
-        buttonExit = new JButton("Exit");
+        buttonExit = new JButton("Salir");
         buttonExit.addActionListener( new exitActionListener());
-        buttonView = new JButton("View");
+        buttonView = new JButton("Ver");
         buttonView.addActionListener( new viewActionListener());
         
         blank1 = new JLabel(" ");
         blank2 = new JLabel(" ");
         blank3 = new JLabel(" ");
-        labelN = new JLabel("Consult Cattle Menu");
+        labelN = new JLabel("Menu Consultar Ganado");
         labelS = new JLabel("");
-        cattleID = new JLabel("Enter the Cattle ID");
-        cattleID.setPreferredSize(new Dimension(165,19));
-        cattleName = new JLabel("Name"); 
+        cattleID = new JLabel("Ingresar el ID de Ganado");
+        cattleID.setPreferredSize(new Dimension(185,19));
+        cattleName = new JLabel("Nombre"); 
         cattleName.setPreferredSize(new Dimension(135,19));
-        cattleBirthdate = new JLabel("Birthdate");
+        cattleBirthdate = new JLabel("Cumpleanos");
         cattleBirthdate.setPreferredSize(new Dimension(135,19));
-        cattleLastWeight = new JLabel("Last Weight");
+        cattleLastWeight = new JLabel("Ultimo Peso");
         cattleLastWeight.setPreferredSize(new Dimension(135,19));
-        cattleSex = new JLabel("Gender");
+        cattleSex = new JLabel("Geneno/Sexo");
         cattleSex.setPreferredSize(new Dimension(135,19));
-        cattleBreed = new JLabel("Breed/Type");
+        cattleBreed = new JLabel("Raza/Tipo");
         cattleBreed.setPreferredSize(new Dimension(135,19));
         
         viewcattleName = new JLabel(""); 

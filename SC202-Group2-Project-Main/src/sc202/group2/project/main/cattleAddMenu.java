@@ -67,24 +67,24 @@ public class cattleAddMenu {
         panelWMiddle = new JPanel();
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
-        buttonExit = new JButton("Exit");
+        buttonExit = new JButton("Salir");
         buttonExit.addActionListener( new exitActionListener());
-        buttonSave = new JButton("Save");
+        buttonSave = new JButton("Guardar");
         buttonSave.addActionListener( new saveActionListener());
         
-        labelN = new JLabel("Add New Cattle Menu");
+        labelN = new JLabel("Menu Agregar Ganado Nuevo");
         labelS = new JLabel("");
-        LBcattleID = new JLabel("Cattle ID"); 
+        LBcattleID = new JLabel("ID de Ganado"); 
         LBcattleID.setPreferredSize(new Dimension(135,19));
-        LBcattleName = new JLabel("Cattle Name");
+        LBcattleName = new JLabel("Nombre de Ganado");
         LBcattleName.setPreferredSize(new Dimension(135,19));
-        LBcattleBirthdate = new JLabel("Cattle Birthdate");
+        LBcattleBirthdate = new JLabel("Cumpleanos");
         LBcattleBirthdate.setPreferredSize(new Dimension(135,19));
-        LBcattleLastWeight = new JLabel("Cattle Last Weight");
+        LBcattleLastWeight = new JLabel("Ultimo Peso");
         LBcattleLastWeight.setPreferredSize(new Dimension(135,19));
-        LBcattleSex = new JLabel("Cattle Sex");
+        LBcattleSex = new JLabel("Genero/Sexo");
         LBcattleSex.setPreferredSize(new Dimension(135,19));
-        LBcattleBreed = new JLabel("Cattle Breed");
+        LBcattleBreed = new JLabel("Raza/Tipo");
         LBcattleBreed.setPreferredSize(new Dimension(135,19));
         
         TXcattleID = new JTextField(20); 

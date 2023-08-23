@@ -62,7 +62,7 @@ public class paddockConsultMenu {
     public void paddockConsultMenu() {
         
         frame = new JFrame();
-        frame.setSize(440, 350);
+        frame.setSize(500, 350);
         
         panelN = new JPanel();
         panelW = new JPanel();
@@ -80,24 +80,24 @@ public class paddockConsultMenu {
         blank1 = new JLabel(" ");
         blank2 = new JLabel(" ");
         blank3 = new JLabel(" ");
-        labelN = new JLabel("Consult Paddock Menu");
+        labelN = new JLabel("Menu Consultar Potrero");
         labelS = new JLabel("");
-        paddocksId = new JLabel("Enter the Paddock ID");
+        paddocksId = new JLabel("ID del Potrero");
         paddocksId.setPreferredSize(new Dimension(165,19));
-        paddocksName = new JLabel("Name"); 
-        paddocksName.setPreferredSize(new Dimension(135,19));
-        paddocksStatus = new JLabel("Status");
-        paddocksStatus.setPreferredSize(new Dimension(135,19));
-        cattleEntryDate = new JLabel("Entry Date");
-        cattleEntryDate.setPreferredSize(new Dimension(135,19));
-        cattleExitDate = new JLabel("Exit Date");
-        cattleExitDate.setPreferredSize(new Dimension(135,19));
-        ammountCattle = new JLabel("Ammount of Cattle");
-        ammountCattle.setPreferredSize(new Dimension(135,19));
-        waterCattle = new JLabel("Water");
-        waterCattle.setPreferredSize(new Dimension(135,19));
-        terrainType = new JLabel("Terrain Type");
-        terrainType.setPreferredSize(new Dimension(135,19));
+        paddocksName = new JLabel("Nombre"); 
+        paddocksName.setPreferredSize(new Dimension(240,19));
+        paddocksStatus = new JLabel("Estado");
+        paddocksStatus.setPreferredSize(new Dimension(240,19));
+        cattleEntryDate = new JLabel("Fecha de ingreso de Ganado");
+        cattleEntryDate.setPreferredSize(new Dimension(240,19));
+        cattleExitDate = new JLabel("Fecha de salida de Ganado");
+        cattleExitDate.setPreferredSize(new Dimension(240,19));
+        ammountCattle = new JLabel("Cant de Banado");
+        ammountCattle.setPreferredSize(new Dimension(240,19));
+        waterCattle = new JLabel("Agua");
+        waterCattle.setPreferredSize(new Dimension(240,19));
+        terrainType = new JLabel("Tipo de Terreno");
+        terrainType.setPreferredSize(new Dimension(240,19));
 
         viewpaddocksName = new JLabel(""); 
         viewpaddocksName.setPreferredSize(new Dimension(135,19));

@@ -44,7 +44,7 @@ public class cattleDelMenu {
     public void cattleDelMain() {
         
         frame = new JFrame();
-        frame.setSize(400, 300);
+        frame.setSize(450, 300);
         
         panelN = new JPanel();
         panelW = new JPanel();
@@ -53,15 +53,15 @@ public class cattleDelMenu {
         panelWMiddle = new JPanel();
         panelEMiddle = new JPanel();
         panelMiddle = new JPanel();
-        buttonExit = new JButton("Exit");
+        buttonExit = new JButton("Salir");
         buttonExit.addActionListener( new exitActionListener());
-        buttonDel = new JButton("Delete");
+        buttonDel = new JButton("Borrar");
         buttonDel.addActionListener( new delActionListener());
         
-        labelN = new JLabel("Delete Cattle Menu");
+        labelN = new JLabel("Menu Borrar Ganado");
         labelS = new JLabel("");
-        LBcattleID = new JLabel("Enter the Cattle ID"); 
-        LBcattleID.setPreferredSize(new Dimension(135,19));
+        LBcattleID = new JLabel("Ingresar el ID de Ganado"); 
+        LBcattleID.setPreferredSize(new Dimension(185,19));
         blank1 = new JLabel(" ");
         
         TXcattleID = new JTextField(20); 

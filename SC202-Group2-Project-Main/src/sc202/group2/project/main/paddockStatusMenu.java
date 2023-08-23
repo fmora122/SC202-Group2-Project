@@ -56,7 +56,7 @@ public class paddockStatusMenu {
     public void paddockStatusMain() {
 
         frame = new JFrame();
-        frame.setSize(450, 300);
+        frame.setSize(500, 300);
 
         panelN = new JPanel();
         panelW = new JPanel();
@@ -77,12 +77,12 @@ public class paddockStatusMenu {
         buttonGroup.add(busy);
         buttonGroup.add(inrest);
 
-        labelN = new JLabel("Set Paddock Status Menu");
+        labelN = new JLabel("Menu Cambiar Estado del Potrero");
         labelS = new JLabel("");
-        LBpaddockID = new JLabel("Enter the Paddock ID");
-        LBpaddockID.setPreferredSize(new Dimension(155, 19));
-        LBpaddockStatus = new JLabel("Select the Paddock Status");
-        LBpaddockStatus.setPreferredSize(new Dimension(190, 19));
+        LBpaddockID = new JLabel("Ingresar ID del Potrero");
+        LBpaddockID.setPreferredSize(new Dimension(250, 19));
+        LBpaddockStatus = new JLabel("Seleccionar el Estado del Potrero");
+        LBpaddockStatus.setPreferredSize(new Dimension(250, 19));
         blank1 = new JLabel(" ");
         blank2 = new JLabel(" ");
         blank3 = new JLabel(" ");

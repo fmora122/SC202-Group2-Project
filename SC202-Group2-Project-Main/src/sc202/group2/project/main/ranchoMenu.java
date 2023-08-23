@@ -50,19 +50,19 @@ public class ranchoMenu {
         panelN = new JPanel();
         panelC = new JPanel();
         panelMiddle = new JPanel();
-        labelN = new JLabel("Main Menu");
+        labelN = new JLabel("Menu Principal");
         
-        buttonCattle = new JButton("Cattle Management");
-        buttonCattle.setMaximumSize(new Dimension(215, 25));
+        buttonCattle = new JButton("Administracion de Ganado");
+        buttonCattle.setMaximumSize(new Dimension(250, 25));
         buttonCattle.addActionListener( new cattleActionListener());
-        buttonEstate = new JButton("Estate Management");
-        buttonEstate.setMaximumSize(new Dimension(215, 25));
+        buttonEstate = new JButton("Administracion de Fincas");
+        buttonEstate.setMaximumSize(new Dimension(250, 25));
         buttonEstate.addActionListener( new estateActionListener());
-        buttonPaddock = new JButton("Paddock Management");
-        buttonPaddock.setMaximumSize(new Dimension(215, 25));
+        buttonPaddock = new JButton("Administracion de Potreros");
+        buttonPaddock.setMaximumSize(new Dimension(250, 25));
         buttonPaddock.addActionListener( new paddockActionListener());
-        buttonAnalytics = new JButton("Paddocks Analytics");
-        buttonAnalytics.setMaximumSize(new Dimension(215, 25));
+        buttonAnalytics = new JButton("Analisis de Potreros");
+        buttonAnalytics.setMaximumSize(new Dimension(250, 25));
         buttonAnalytics.addActionListener( new analyticsActionListener());
         
         frame.addWindowListener(new WindowAdapter() {
